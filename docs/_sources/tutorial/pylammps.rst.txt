@@ -1,0 +1,19 @@
+.. _pylammps:
+
+==============
+Using PyLAMMPS
+==============
+
+LAMMPS_ is an open-source code to run classical molecular dynamics simulation for material modeling.
+
+`PyLAMMPS <https://lammps.sandia.gov/doc/Howto_pylammps.html>`_ is a Python wrapper class which provides an Python interface to execute LAMMPS program.
+
+Also, PyLAMMPS can run in parallel with mpi4py_, more details please refer to the `official documents`__.
+
+----
+
+.. _LAMMPS: https://lammps.sandia.gov/
+.. _mpi4py: https://mpi4py.readthedocs.io/en/stable/
+.. _pylmpmpi: https://lammps.sandia.gov/doc/Howto_pylammps.html#using-pylammps-and-mpi4py-experimental
+__ pylmpmpi_
+

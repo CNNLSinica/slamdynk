@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ann_soap &mdash; SLAMDYNK3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ann_tflow" href="ann_tflow.html" />
+    <link rel="prev" title="Chpoint2Parms" href="Chpoint2Parms.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SLAMDYNK3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ANN_Parity.html">ANN_Parity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ann_soap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_tflow.html">ann_tflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chk_fp.html">chk_fp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control.html">control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_lmp.html">run_lmp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_train.html">run_train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structools.html">structools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SLAMDYNK3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="module.html">Modules</a> &raquo;</li>
+        
+      <li>ann_soap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/module/ann_soap.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ann_soap">
+<span id="ann-soap"></span><h1>ann_soap<a class="headerlink" href="#module-ann_soap" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="ann_soap.amp_retrain">
+<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">amp_retrain</code><span class="sig-paren">(</span><em class="sig-param">status=None</em>, <em class="sig-param">c_vasp=None</em>, <em class="sig-param">c_amp=None</em>, <em class="sig-param">retrain=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.amp_retrain" title="Permalink to this definition">¶</a></dt>
+<dd><p>AMP/Tensorflow retrain with new added configurations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>dict</em>) – Dict form <code class="xref py py-mod docutils literal notranslate"><span class="pre">init_pgm</span></code></p></li>
+<li><p><strong>c_vasp</strong> (<em>ASE VASP calculator object</em>) – </p></li>
+<li><p><strong>c_amp</strong> (<em>dict</em><em> or </em><em>AMP calculator object</em>) – Dict for Tensorflow/Keras training</p></li>
+<li><p><strong>retrain</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ann_soap.diff_ann_mc">
+<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">diff_ann_mc</code><span class="sig-paren">(</span><em class="sig-param">status=None</em>, <em class="sig-param">mc_imgs=None</em>, <em class="sig-param">err_val=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.diff_ann_mc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare energy for different ANN potential</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>dict</em>) – Dict from <code class="xref py py-mod docutils literal notranslate"><span class="pre">init_pgm</span></code></p></li>
+<li><p><strong>mc_imgs</strong> (<em>str</em>) – LAMMPS dump filename of MC simulation</p></li>
+<li><p><strong>err_val</strong> (<em>float</em>) – Criteria for energy comparison</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>**True** for energy difference &gt;:mod:<cite>err_val</cite>, else <strong>False</strong></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ann_soap.init_pgm">
+<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">init_pgm</code><span class="sig-paren">(</span><em class="sig-param">loop_index=1</em>, <em class="sig-param">prep_struct='0-prepared_structs'</em>, <em class="sig-param">old_db='1-1st_ANN_potential/all_train.db'</em>, <em class="sig-param">test_db='1-1st_ANN_potential/all_test.db'</em>, <em class="sig-param">old_amp='1-1st_ANN_potential/amp.amp'</em>, <em class="sig-param">new_db='3-updated_ANN_potential/all_train.db'</em>, <em class="sig-param">new_amp='3-updated_ANN_potential/amp.amp'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.init_pgm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize parameters for this program</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>loop_index</strong> (<em>int</em>) – This index will be used as prefix of created files during the program</p></li>
+<li><p><strong>prep_struct</strong> (<em>str</em>) – Randomly created initial structures</p></li>
+<li><p><strong>old_db</strong> (<em>str</em>) – The initial training set in ASE db format</p></li>
+<li><p><strong>test_db</strong> (<em>str</em>) – The testing set in ASE db format</p></li>
+<li><p><strong>old_amp</strong> (<em>str</em>) – ANN potential file in AMP format</p></li>
+<li><p><strong>new_db</strong> (<em>str</em>) – The training set with new added configurations from self-learning</p></li>
+<li><p><strong>new_amp</strong> (<em>str</em>) – ANN potential trained with <cite>new_db</cite></p></li>
+<li><p><strong>ncores</strong> (<em>int</em>) – Number of cores for parallel computating</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>status</strong> – Dict contains all options</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ann_soap.lmpann_fpcheck">
+<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">lmpann_fpcheck</code><span class="sig-paren">(</span><em class="sig-param">status=None</em>, <em class="sig-param">condition=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.lmpann_fpcheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run PyLAMMPS with pair_ann potential &amp; check fingerprints</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>dict</em>) – Dict from <cite>init_pgm</cite></p></li>
+<li><p><strong>condition</strong> (<em>dict</em>) – Dict contains parameters for <a class="reference internal" href="run_lmp.html#run_lmp.run_annlmp" title="run_lmp.run_annlmp"><code class="xref py py-mod docutils literal notranslate"><span class="pre">run_lmp.run_annlmp</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ienter</strong> – <strong>True</strong> for retrain, <strong>False</strong> for pass</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ann_soap.plot_ediff">
+<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">plot_ediff</code><span class="sig-paren">(</span><em class="sig-param">E_prev</em>, <em class="sig-param">E_new</em>, <em class="sig-param">fig_out='eng_comp.png'</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.plot_ediff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot energy difference for different ANN potential</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E_prev</strong> (<em>list</em>) – Energy list by previous ANN potential</p></li>
+<li><p><strong>E_new</strong> (<em>list</em>) – Energy list by new ANN potential</p></li>
+<li><p><strong>fig_out</strong> (<em>str</em>) – Figure filename</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ann_tflow.html" class="btn btn-neutral float-right" title="ann_tflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Chpoint2Parms.html" class="btn btn-neutral float-left" title="Chpoint2Parms" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, CNNL
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
