@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>structools &mdash; SLAMDYNK3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="utilities" href="utilities.html" />
+    <link rel="prev" title="run_train" href="run_train.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SLAMDYNK3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ANN_Parity.html">ANN_Parity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_soap.html">ann_soap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_tflow.html">ann_tflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chk_fp.html">chk_fp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control.html">control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_lmp.html">run_lmp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_train.html">run_train</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">structools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SLAMDYNK3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="module.html">Modules</a> &raquo;</li>
+        
+      <li>structools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/module/structools.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-structools">
+<span id="structools"></span><h1>structools<a class="headerlink" href="#module-structools" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="structools.add_vac">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">add_vac</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">vac_count=None</em>, <em class="sig-param">vac_prob=None</em>, <em class="sig-param">rand=True</em>, <em class="sig-param">max_call=10000</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.add_vac" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add vacancies into Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>vac_count</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>vac_prob</strong> (<em>dict</em>) – use either <em>vac_count</em> or <em>vac_prob</em></p></li>
+<li><p><strong>rand</strong> (<em>bool</em><em> or </em><em>int</em>) – random seed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span><span class="p">,</span> <span class="n">add_vac</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span><span class="o">=</span><span class="n">assign_alloy</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="s1">&#39;Al&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Alloy</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cu16Al16&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Vac</span><span class="o">=</span><span class="n">add_vac</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Alloy</span><span class="p">,</span> <span class="n">vac_count</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">vac_prob</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Cu&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;Al&#39;</span><span class="p">:</span><span class="mf">0.9</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Vac</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cu7Al&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.assign_alloy">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">assign_alloy</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">elements=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.assign_alloy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign elements into Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>elements</strong> (<em>list</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Cu</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cu32&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span><span class="o">=</span><span class="n">assign_alloy</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cr&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Fe&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Alloy</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cr8Co8Ni8Fe8&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.chg_cubic_box">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">chg_cubic_box</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">length=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.chg_cubic_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change box size of the cluster structure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>length</strong> (<em>float</em>) – cell_length = size_of_cluster + 2*length, default length = 10</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.comp_sub_pairs">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">comp_sub_pairs</code><span class="sig-paren">(</span><em class="sig-param">sites=None</em>, <em class="sig-param">sub_pairs_ratio=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.comp_sub_pairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute possible number of substitutions of specified elements in Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sites</strong> (<em>dict</em>) – e.g. {‘A’:1, ‘B’:2, ‘C’:3}</p></li>
+<li><p><strong>sub_pairs_ratio</strong> (<em>dict</em>) – e.g. {(‘C’,’D’): 0.33}</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>SUB</strong> – all numbers will be rounded up to the smallest integer &gt;= itselves
+e.g. {‘C’:[(‘D’,1)]}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.create_bulk">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">create_bulk</code><span class="sig-paren">(</span><em class="sig-param">elements=None</em>, <em class="sig-param">replicate=1</em>, <em class="sig-param">rand=False</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.create_bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create bulk with assigned elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>elements</strong> (<em>list</em>) – </p></li>
+<li><p><strong>replicate</strong> (<em>int</em>) – supercell</p></li>
+<li><p><strong>rand</strong> (<em>bool</em><em> or </em><em>int</em>) – random seed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A1</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">(</span><span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Fe&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Cr&#39;</span><span class="p">],</span> <span class="n">replicate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Fe4Co4Ni4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A2</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">(</span><span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Al&#39;</span><span class="p">,</span><span class="s1">&#39;Cu&#39;</span><span class="p">],</span> <span class="n">replicate</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">rand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A2</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;CuAl2Cu&#39;, pbc=True, cell=[4.05, 4.05, 4.05])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.create_structlist">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">create_structlist</code><span class="sig-paren">(</span><em class="sig-param">struct_list=None</em>, <em class="sig-param">ext='xsf'</em>, <em class="sig-param">index_start=0</em>, <em class="sig-param">check_duplicate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.create_structlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create structures from the list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>struct_list</strong> (<em>list</em>) – list of parameters for structure generators</p></li>
+<li><p><strong>ext</strong> (<em>str</em>) – extension of output structure file</p></li>
+<li><p><strong>index_start</strong> (<em>int</em>) – index for the prefix of files</p></li>
+<li><p><strong>check_duplicate</strong> (<em>list</em>) – list of bool values, e.g. [True, False, …]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ind</strong> – index number of the last created structure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.cut_cluster">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">cut_cluster</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">rc_index=0</em>, <em class="sig-param">radius=6.5</em>, <em class="sig-param">mode='std'</em>, <em class="sig-param">ichgbox=True</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.cut_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut cluster from Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>rc_index</strong> (<em>int</em>) – index of the central atom</p></li>
+<li><p><strong>radius</strong> (<em>float</em>) – </p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – ‘std’: no supplementary atoms
+‘add’: add supplementary atoms</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cluster_list</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[list of ASE Atoms object]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.multi_call">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">multi_call</code><span class="sig-paren">(</span><em class="sig-param">ncall=1</em>, <em class="sig-param">check_duplicate=False</em>, <em class="sig-param">max_call=10000</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.multi_call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call function with multiple times</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ncall</strong> (<em>int</em>) – </p></li>
+<li><p><strong>check_duplicate</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dec</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span><span class="p">,</span> <span class="n">swap_atoms</span><span class="p">,</span> <span class="n">multi_call</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">A0</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">([</span><span class="s1">&#39;Fe&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Cr&#39;</span><span class="p">],</span> <span class="n">replicate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Fe4Co4Ni4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ann</span><span class="o">=</span><span class="n">multi_call</span><span class="p">(</span><span class="n">ncall</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">check_duplicate</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">swap_atoms</span><span class="p">)(</span><span class="n">atoms</span><span class="o">=</span><span class="n">A0</span><span class="p">,</span> <span class="n">swap_pairs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Cr&#39;</span><span class="p">:[</span><span class="s1">&#39;Co&#39;</span><span class="p">],</span><span class="s1">&#39;Fe&#39;</span><span class="p">:[</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">]})</span>
+<span class="go">-&gt; Generate struct wo duplicate</span>
+<span class="go">-&gt; Generate struct wo duplicate</span>
+<span class="go">-&gt; Generate struct wo duplicate</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Ann</span><span class="p">)</span>
+<span class="go">[Atoms(symbols=&#39;Fe2CoFeCoFeCo2Ni4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74]), Atoms(symbols=&#39;Fe4Co2CrCoNi4CrCoCr2&#39;, pbc=True, cell=[5.74, 5.74, 5.74]), Atoms(symbols=&#39;Fe2CoFeCo2FeCoNi4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74])]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.strained_bulk">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">strained_bulk</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">scale=1</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.strained_bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate Isotropic-Strained Cell of Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>scale</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span><span class="p">,</span> <span class="n">strained_bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">([</span><span class="s1">&#39;Cu&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Cu</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cu4&#39;, pbc=True, cell=[3.61, 3.61, 3.61])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sCu</span><span class="o">=</span><span class="n">strained_bulk</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sCu</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cu4&#39;, pbc=True, cell=[2.888, 2.888, 2.888])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.sub_atoms">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">sub_atoms</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">sub_pairs_ratio=None</em>, <em class="sig-param">run_swap=False</em>, <em class="sig-param">swap_pairs=None</em>, <em class="sig-param">swap_rand=True</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.sub_atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Substitue atoms by specified atom-pairs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>sub_pairs_ratio</strong> (<em>dict</em>) – e.g. {(‘C’,’D’): 0.33}, replace C by D with ratio equals 0.33</p></li>
+<li><p><strong>run_swap</strong> (<em>bool</em>) – run swap_atom or not</p></li>
+<li><p><strong>swap_pairs</strong> (<em>dict</em>) – used when <em>run_swap</em> ==True</p></li>
+<li><p><strong>swap_rand</strong> (<em>bool</em><em> or </em><em>int</em>) – random seed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.swap_atoms">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">swap_atoms</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">swap_pairs=None</em>, <em class="sig-param">rand=True</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.swap_atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swap specified atom-pairs of Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>swap_pairs</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>rand</strong> (<em>bool</em><em> or </em><em>int</em>) – random seed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span><span class="p">,</span> <span class="n">swap_atoms</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span><span class="o">=</span><span class="n">assign_alloy</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cr&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Fe&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Alloy</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cr8Co8Ni8Fe8&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Swap</span><span class="o">=</span><span class="n">swap_atoms</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Alloy</span><span class="p">,</span> <span class="n">swap_pairs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Cr&#39;</span><span class="p">:[</span><span class="s1">&#39;Co&#39;</span><span class="p">],</span><span class="s1">&#39;Fe&#39;</span><span class="p">:[</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Swap</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Cr8Co5FeCo2Ni8Fe4CoFe3&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.vacuum_slab">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">vacuum_slab</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">z=10</em>, <em class="sig-param">shiftz=True</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.vacuum_slab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add vacuum along z-axis of Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>z</strong> (<em>float</em>) – thickness of vacuum layer</p></li>
+<li><p><strong>shiftz</strong> (<em>bool</em>) – shift atoms to the middle of the cell</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.write_xsf">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">write_xsf</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">filename=''</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.write_xsf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write xsf file from Atoms object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None, output xsf-format file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="utilities.html" class="btn btn-neutral float-right" title="utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="run_train.html" class="btn btn-neutral float-left" title="run_train" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, CNNL
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

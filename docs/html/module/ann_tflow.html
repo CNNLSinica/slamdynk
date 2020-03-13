@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ann_tflow &mdash; SLAMDYNK3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="chk_fp" href="chk_fp.html" />
+    <link rel="prev" title="ann_soap" href="ann_soap.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SLAMDYNK3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ANN_Parity.html">ANN_Parity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_soap.html">ann_soap</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ann_tflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chk_fp.html">chk_fp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="control.html">control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_lmp.html">run_lmp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_train.html">run_train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structools.html">structools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SLAMDYNK3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="module.html">Modules</a> &raquo;</li>
+        
+      <li>ann_tflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/module/ann_tflow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ann-tflow">
+<span id="id1"></span><h1>ann_tflow<a class="headerlink" href="#ann-tflow" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-ann_tflow"></span><dl class="class">
+<dt id="ann_tflow.NeuralNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ann_tflow.</code><code class="sig-name descname">NeuralNetwork</code><span class="sig-paren">(</span><em class="sig-param">images=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">sampling=None</em>, <em class="sig-param">hiddenlayers=(5</em>, <em class="sig-param">5)</em>, <em class="sig-param">cutoff=6.5</em>, <em class="sig-param">maxTrainingEpochs=1000000</em>, <em class="sig-param">opt_num_correction_pairs=1000</em>, <em class="sig-param">opt_parallel_iterations=8</em>, <em class="sig-param">stdscaler='normalize'</em>, <em class="sig-param">cores=1</em>, <em class="sig-param">multi_gpus=False</em>, <em class="sig-param">gpu_max_usage=4096</em>, <em class="sig-param">energy_coefficient=1.0</em>, <em class="sig-param">force_coefficient=0.04</em>, <em class="sig-param">convergenceCriteria={'energy_maxresid': None</em>, <em class="sig-param">'energy_rmse': 0.001</em>, <em class="sig-param">'force_maxresid': None</em>, <em class="sig-param">'force_rmse': None}</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>TensorFlow-based Neural Network model.</p>
+<p>Uses TensorFlow 2.0 to construct a neural network. This
+method also allows for GPU acceleration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> (<em>str</em>) – List of ASE atoms objects that are being trained.</p></li>
+<li><p><strong>parameters</strong> (<em>str</em>) – File of AMP or ANN-tflow that contains parameters.</p></li>
+<li><p><strong>sampling</strong> (<em>str</em><em> or </em><em>int</em>) – sampling method of data point in images</p></li>
+<li><p><strong>cutoff</strong> (<em>float</em>) – Cutoff represent the radius above which neighbor interactions
+are ignored. Default is 6.5 Angstroms.</p></li>
+<li><p><strong>hiddenlayers</strong> (<em>tunple</em><em> or </em><em>dict</em>) – Structure of the neural network. Can either be in the format
+(int,int,int), where each element represnts the size of a layer
+and there and the length of the list is the number of layers,
+or dictionary format of the network structure for each element
+type. E.g. {‘Cu’: (10, 5, 5), ‘Pt’: (10, 5)}. Default is (5, 5).</p></li>
+<li><p><strong>maxTrainingEpochs</strong> (<em>int</em>) – Maximum number of times to loop through the training data before
+giving up. Default is 1,000,000.</p></li>
+<li><p><strong>opt_num_correction_pairs</strong> (<em>int</em>) – Specifies the maximum number of (position_delta, gradient_delta)
+correction pairs to keep as implicit approximation of the Hessian
+matrix in tensorflow probability l-bfgs optimizer. Default is
+1,000.</p></li>
+<li><p><strong>opt_parallel_iterations</strong> (<em>int</em>) – The number of iterations allowed tensorflow probability l-bfgs
+optimizer to run in parallel. Default is 8.</p></li>
+<li><p><strong>stdscaler</strong> (<em>str</em>) – Normalize method of input fingerprints/fingerprint-primes.
+2 method are allowed, normalize and zero_mean. Default is
+‘normalize’.</p></li>
+<li><p><strong>cores</strong> (<em>int</em>) – The number of cores for calculating fingerprints/fingerprint-primes by AMP.
+Default is 1.</p></li>
+<li><p><strong>multi_gpus</strong> (<em>bool</em>) – Set this to True allows using multiple GPUs in training procedure.
+Default is False.</p></li>
+<li><p><strong>gpu_max_usage</strong> (<em>int</em>) – Maximum memory (in MB) to allocate on the GPUs device. Default
+is 4096 MB.</p></li>
+<li><p><strong>energy_coefficient</strong> (<em>float</em>) – Used to adjust the loss function; this is the initial weight
+applied  to the energy component. Default is 1.0.</p></li>
+<li><p><strong>force_coefficient</strong> (<em>float</em><em> or </em><em>None</em>) – Used to adjust the loss function; this is the initial weight applied
+to the force component. Default is 0.04.</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>convergenceCriteria: dict</dt><dd><p>Dictionary of convergence criteria, analogous to the main AMP
+convergence criteria dictionary. Default is
+{‘energy_rmse’: 0.001, ‘energy_maxresid’: None,</p>
+<blockquote>
+<div><p>‘force_rmse’: None, ‘force_maxresid’: None}</p>
+</div></blockquote>
+<p>Note: you can turn off force training by setting both ‘force_rmse’ and
+‘force_maxresid’ to None.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.ANN_Model">
+<code class="sig-name descname">ANN_Model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.ANN_Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Keras machine learning model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.amp_afp_derafp">
+<code class="sig-name descname">amp_afp_derafp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.amp_afp_derafp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given ASE DB , calculate Fingerprints, Fingerprintprimes,
+True Energy, and True Forces.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.get_elements">
+<code class="sig-name descname">get_elements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.get_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given Fingerprints, get a list of all element types
+in training sets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.get_fingerprintprimes">
+<code class="sig-name descname">get_fingerprintprimes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.get_fingerprintprimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>With given AMP Fingerprintprimes, restructure Fingerprintprimes
+to a new structure that can use to create the ANN input easily.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.get_fingerprints">
+<code class="sig-name descname">get_fingerprints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.get_fingerprints" title="Permalink to this definition">¶</a></dt>
+<dd><p>With given AMP Fingerprints, restructure Fingerprints to a
+new structure that can use to create the ANN input easily.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.get_train_data">
+<code class="sig-name descname">get_train_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.get_train_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given ANN Fingerprint &amp; Fingerprintprimes, get training inputs and labels.
+Such as input_afp, input_derafp, input_scaling, E_true, F_true, imgAtomNums,
+totalImages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.opt_main_fn">
+<code class="sig-name descname">opt_main_fn</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">train_ins</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.opt_main_fn" title="Permalink to this definition">¶</a></dt>
+<dd><p>A factory to create a function required by tfp.optimizer.lbfgs_minimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – an instance of <a href="#id2"><span class="problematic" id="id3">`</span></a>tf.keras.Model.</p></li>
+<li><p><strong>train_ins</strong> – the input and output part of training data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>loss_value, gradients = f(model_parameters).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A function that has a signature of</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_tflow.NeuralNetwork.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_tflow.NeuralNetwork.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the model parameters such that the fingerprints can be used to
+describe the energies in trainingimages. log is the logging object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chk_fp.html" class="btn btn-neutral float-right" title="chk_fp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ann_soap.html" class="btn btn-neutral float-left" title="ann_soap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, CNNL
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
