@@ -1,5 +1,0 @@
-control
-=======
-
-.. automodule:: control
-   :members:

@@ -1,5 +1,0 @@
-structools
-==========
-
-.. automodule:: structools
-   :members:
