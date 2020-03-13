@@ -7,7 +7,7 @@ About
 Description
 ===========
 
-- **Package name:** **S**\elf- **L**\earning **A**\to **M**\istic **DYN**\mic tool **K**\it
+- **Package name:** **S**\ elf-\ **L**\ earning **A**\ to\ **M**\ istic **DYN**\ mic tool\ **K**\ it
 - **Authors:** CNNL
 - **Release date:** 2020.03.06
 

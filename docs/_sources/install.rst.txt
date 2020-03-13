@@ -12,17 +12,18 @@ Requirements
 - tensorflow-2.0.0
 - tensorflow-probability-0.8.0
 - keras-2.3.1
+- mpi4py
 - lammps-22Aug18
 - vasp.5.4.x
 
 Installation from Source
 ========================
 
-1. Get the latest release from https://github.com/shenghanteng/slamdynk3
+1. Get the latest release from https://github.com/CNNLSinica/slamdynk
 
 ::
 
-    $ git clone https://github.com/shenghanteng/slamdynk3.git
+    $ git clone https://github.com/CNNLSinica/slamdynk.git
 
 2. make
 
