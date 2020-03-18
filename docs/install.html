@@ -169,11 +169,11 @@
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>ase-3.19.0</p></li>
-<li><p>amp-atomistics-0.6.1</p></li>
-<li><p>tensorflow-2.0.0</p></li>
-<li><p>tensorflow-probability-0.8.0</p></li>
-<li><p>keras-2.3.1</p></li>
+<li><p>ase==3.19.0</p></li>
+<li><p>amp-atomistics==0.6.1</p></li>
+<li><p>tensorflow==2.0.0</p></li>
+<li><p>tensorflow-probability==0.8.0</p></li>
+<li><p>keras==2.3.1</p></li>
 <li><p>mpi4py</p></li>
 <li><p>lammps-22Aug18</p></li>
 <li><p>vasp.5.4.x</p></li>
@@ -188,28 +188,42 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>make</p></li>
+<li><p>Make, and install the package</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make
 $ cd build
+$ python install.py [pydir]
 </pre></div>
 </div>
 <p>or</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make build_c
 $ cd build_c
+$ python install.py [pydir]
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li><p>Initialize the program</p></li>
+<li><p>Export the PATH</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash init.sh
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export PATH=$PATH:&lt;YOUR_BUILD_DIR&gt;
 </pre></div>
 </div>
 <p>p.s. for the latest version of training module <a class="reference internal" href="module/ann_tflow.html#ann-tflow"><span class="std std-ref">ann_tflow</span></a>, please refer to <a class="reference external" href="https://ardahsieh.github.io/ANN-tflow-guide/">here</a>.</p>
 </div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p>Prepare the initial structure …</p>
+<ol class="arabic simple">
+<li><p>Prepare the initial structure …</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+POSCAR init_c.sh
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Initialize the program</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash init_c.sh
+</pre></div>
+</div>
 </div>
 </div>
 

@@ -52,7 +52,7 @@ Build LAMMPS
 ::
 
  $ mkdir build
- $ cmake -C ../cmake/presets/std_nolib.cmake -D PYTHON_LIBRARY=/<YOUR_PATH>/lib/libpython2.7.so -D PKG_PYTHON=on -D BUILD_LIB=on -D BUILD_SHARED_LIBS=on -D BUILD_MPI=on -D PKG_USER-MEAMC=on -D PKG_MEAM=on -D CMAKE_INSTALL_PREFIX=$VIRTUAL_ENV ../cmake
+ $ cmake -C ../cmake/presets/std_nolib.cmake -D PYTHON_LIBRARY=/<YOUR_PATH>/lib/libpython<3.x>.so -D PKG_PYTHON=on -D BUILD_LIB=on -D BUILD_SHARED_LIBS=on -D BUILD_MPI=on -D PKG_USER-MEAMC=on -D PKG_MEAM=on -D CMAKE_INSTALL_PREFIX=$VIRTUAL_ENV ../cmake
  $ make -j4
 
 3. Assign the library path before execution

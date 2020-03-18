@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using PyLAMMPS &mdash; SLAMDYNK3 0.1 documentation</title>
+  <title>Using virtual environment &mdash; SLAMDYNK3 0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Modules" href="../module/module.html" />
-    <link rel="prev" title="Using virtual environment" href="virtualenv.html" />
+    <link rel="next" title="Using PyLAMMPS" href="pylammps.html" />
+    <link rel="prev" title="Introduction to make" href="make.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -89,12 +89,13 @@
 <li class="toctree-l1 current"><a class="reference internal" href="tutorial.html">Tutorial</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="git.html">Using git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="make.html">Introduction to make</a></li>
-<li class="toctree-l2"><a class="reference internal" href="virtualenv.html">Using virtual environment</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using PyLAMMPS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#install-mpi4py">Install mpi4py</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#build-lammps">Build LAMMPS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using virtual environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-virtual-environment">Create virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upgrade-packages">Upgrade packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-packages">Install packages</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="pylammps.html">Using PyLAMMPS</a></li>
 </ul>
 </li>
 </ul>
@@ -152,13 +153,13 @@
         
           <li><a href="tutorial.html">Tutorial</a> &raquo;</li>
         
-      <li>Using PyLAMMPS</li>
+      <li>Using virtual environment</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/tutorial/pylammps.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/tutorial/virtualenv.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,54 +172,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="using-pylammps">
-<span id="pylammps"></span><h1>Using PyLAMMPS<a class="headerlink" href="#using-pylammps" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="using-virtual-environment">
+<span id="virtualenv"></span><h1>Using virtual environment<a class="headerlink" href="#using-virtual-environment" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
-<div class="line"><a class="reference external" href="https://lammps.sandia.gov/">LAMMPS</a> is an open-source code to run classical molecular dynamics simulation for material modeling.</div>
-<div class="line"><a class="reference external" href="https://lammps.sandia.gov/doc/Howto_pylammps.html">PyLAMMPS</a> is a Python wrapper class which provides an Python interface to execute LAMMPS program.</div>
-<div class="line">Also, PyLAMMPS can run in parallel with <a class="reference external" href="https://mpi4py.readthedocs.io/en/stable/">mpi4py</a>, more details please refer to the <a class="reference external" href="https://lammps.sandia.gov/doc/Howto_pylammps.html#using-pylammps-and-mpi4py-experimental">official documents</a>.</div>
+<div class="line">Building packages in a virtual environment is practical to manage different versions and to prevent conflicts of dependencies of different modules.</div>
+<div class="line">Both <a class="reference external" href="https://docs.python.org/3/library/venv.html">venv</a> and <a class="reference external" href="https://virtualenv.pypa.io/en/latest/">virtualenv</a> can be used to create virtual environment in Python3.x.</div>
 </div>
 <hr class="docutils" />
-<div class="section" id="install-mpi4py">
-<h2>Install mpi4py<a class="headerlink" href="#install-mpi4py" title="Permalink to this headline">¶</a></h2>
-<p>[Note] mpi4py and lammps have to use the same MPI.</p>
+<div class="section" id="create-virtual-environment">
+<h2>Create virtual environment<a class="headerlink" href="#create-virtual-environment" title="Permalink to this headline">¶</a></h2>
 <p>Method 1. Install with pip</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install mpi4py
-</pre></div>
-</div>
-<p>Method 2. [recommend] Install with virtualenv or conda, please refer to this <a class="reference external" href="https://lammps.sandia.gov/threads/msg81641.html">thread</a>.</p>
-<ul class="simple">
-<li><p>virtualenv</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ virtualenv myenv
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install virtualenv
+$ virtualenv myenv
 $ source myenv/bin/activate
-$ pip install mpi4py
+</pre></div>
+</div>
+<p>Method 2. Use Python3 module <a class="reference external" href="https://docs.python.org/3/library/venv.html">venv</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python3 -m venv myenv
+$ source myenv/bin/activate
 </pre></div>
 </div>
 </div>
-<div class="section" id="build-lammps">
-<h2>Build LAMMPS<a class="headerlink" href="#build-lammps" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li><p>Dowload and unpack the package</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wget https://github.com/lammps/lammps/archive/stable_22Aug2018.tar.gz
-$ tar -xvf stable_22Aug2018.tar.gz
-$ cd stable_22Aug2018
+<div class="section" id="upgrade-packages">
+<h2>Upgrade packages<a class="headerlink" href="#upgrade-packages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install --upgrade pip setuptools
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Use CMake to <a class="reference external" href="https://lammps.sandia.gov/doc/Build_package.html">build</a></p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir build
-$ cmake -C ../cmake/presets/std_nolib.cmake -D PYTHON_LIBRARY=/&lt;YOUR_PATH&gt;/lib/libpython&lt;3.x&gt;.so -D PKG_PYTHON=on -D BUILD_LIB=on -D BUILD_SHARED_LIBS=on -D BUILD_MPI=on -D PKG_USER-MEAMC=on -D PKG_MEAM=on -D CMAKE_INSTALL_PREFIX=$VIRTUAL_ENV ../cmake
-$ make -j4
+</div>
+<div class="section" id="install-packages">
+<h2>Install packages<a class="headerlink" href="#install-packages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install &lt;package name&gt;
 </pre></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Assign the library path before execution</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export LD_LIBRARY_PATH=/&lt;YOUR_PATH&gt;/lammps/build/:$LD_LIBRARY_PATH
-export PYTHONPATH=/&lt;YOUR_PATH&gt;/lammps/python/:$PYTHONPATH
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat &gt; requirement.txt
+amp-atomistics==0.6.1
+ase==3.19.0
+Keras==2.3.1
+mpi4py==3.0.3
+tensorflow==2.0.0
+tensorflow-probability==0.8.0
+&lt;Ctrl-c&gt;
+
+$ pip install -r requirement.txt
 </pre></div>
 </div>
 </div>
@@ -232,10 +228,10 @@ export PYTHONPATH=/&lt;YOUR_PATH&gt;/lammps/python/:$PYTHONPATH
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../module/module.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pylammps.html" class="btn btn-neutral float-right" title="Using PyLAMMPS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="virtualenv.html" class="btn btn-neutral float-left" title="Using virtual environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="make.html" class="btn btn-neutral float-left" title="Introduction to make" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

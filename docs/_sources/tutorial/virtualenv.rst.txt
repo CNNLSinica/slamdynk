@@ -1,0 +1,60 @@
+.. _virtualenv:
+
+=========================
+Using virtual environment
+=========================
+
+| Building packages in a virtual environment is practical to manage different versions and to prevent conflicts of dependencies of different modules.
+| Both venv_ and `virtualenv <https://virtualenv.pypa.io/en/latest/>`_ can be used to create virtual environment in Python3.x.
+
+.. _venv: https://docs.python.org/3/library/venv.html
+
+----
+
+Create virtual environment
+--------------------------
+
+Method 1. Install with pip
+
+::
+
+ $ pip install virtualenv
+ $ virtualenv myenv
+ $ source myenv/bin/activate
+
+Method 2. Use Python3 module venv_
+
+::
+
+ $ python3 -m venv myenv
+ $ source myenv/bin/activate
+
+Upgrade packages
+----------------
+
+::
+
+ $ pip install --upgrade pip setuptools
+
+Install packages
+----------------
+
+::
+
+ $ pip install <package name>
+
+or
+
+::
+
+ $ cat > requirement.txt
+ amp-atomistics==0.6.1
+ ase==3.19.0
+ Keras==2.3.1
+ mpi4py==3.0.3
+ tensorflow==2.0.0
+ tensorflow-probability==0.8.0
+ <Ctrl-c>
+
+ $ pip install -r requirement.txt
+

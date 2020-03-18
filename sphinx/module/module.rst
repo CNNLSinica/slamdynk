@@ -11,7 +11,6 @@ Modules
    ann_soap
    ann_tflow
    chk_fp
-   control
    neu_decompose_amp
    run_abinit
    run_lmp

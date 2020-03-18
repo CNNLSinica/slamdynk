@@ -8,5 +8,6 @@ Tutorial
 
    git
    make
+   virtualenv
    pylammps
 
