@@ -177,6 +177,27 @@
             
   <div class="section" id="module-utilities">
 <span id="utilities"></span><h1>utilities<a class="headerlink" href="#module-utilities" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="utilities.cat_stderr">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">cat_stderr</code><span class="sig-paren">(</span><em class="sig-param">files=None</em>, <em class="sig-param">file_out='stderr_sum.txt'</em>, <em class="sig-param">overwrite=True</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.cat_stderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate text from stderr files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>files</strong> (<em>list</em>) – list of files</p></li>
+<li><p><strong>file_out</strong> (<em>str</em>) – cat output</p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>text</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="class">
 <dt id="utilities.cd">
 <em class="property">class </em><code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">cd</code><span class="sig-paren">(</span><em class="sig-param">newPath</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.cd" title="Permalink to this definition">¶</a></dt>
@@ -231,9 +252,55 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="utilities.grep_word_text">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">grep_word_text</code><span class="sig-paren">(</span><em class="sig-param">text=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">ieval=True</em>, <em class="sig-param">iout=False</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.grep_word_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grep word from text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em>) – </p></li>
+<li><p><strong>keyword</strong> (<em>str</em>) – </p></li>
+<li><p><strong>ieval</strong> (<em>bool</em>) – use eval to parse output or not</p></li>
+<li><p><strong>iout</strong> (<em>bool</em>) – True: output text without <em>keyword</em>
+False: output text with <em>keyword</em></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>other or data</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="utilities.load_struct">
 <code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">load_struct</code><span class="sig-paren">(</span><em class="sig-param">strfile</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.load_struct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load strcture file into ASE db format</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilities.plot_mc_eng">
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">plot_mc_eng</code><span class="sig-paren">(</span><em class="sig-param">files=None</em>, <em class="sig-param">loop=-1</em>, <em class="sig-param">ichk=False</em>, <em class="sig-param">fig_out='mc_eng.png'</em>, <em class="sig-param">overwrite=True</em>, <em class="sig-param">to_file=False</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.plot_mc_eng" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot energy evolution from stderr</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>files</strong> (<em>list</em>) – list of files</p></li>
+<li><p><strong>loop</strong> (<em>int</em>) – loop index, use -1 for the whole loop</p></li>
+<li><p><strong>fig_out</strong> (<em>str</em>) – </p></li>
+<li><p><strong>overwrite</strong> (<em>bool</em>) – overwrite previous stderr output or not</p></li>
+<li><p><strong>to_file</strong> (<em>bool</em>) – write to file or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
