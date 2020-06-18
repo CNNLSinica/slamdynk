@@ -91,10 +91,9 @@
 <p class="caption"><span class="caption-text">Modules</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ANN_Parity.html">ANN_Parity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_modules.html">ann_modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ann_soap.html">ann_soap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ann_tflow.html">ann_tflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chk_fp.html">chk_fp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
@@ -178,54 +177,15 @@
   <div class="section" id="module-run_train">
 <span id="run-train"></span><h1>run_train<a class="headerlink" href="#module-run_train" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="run_train.amp_train">
-<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">amp_train</code><span class="sig-paren">(</span><em class="sig-param">calc=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">amp_out='amp.amp'</em>, <em class="sig-param">ncores=1</em>, <em class="sig-param">nc=0</em>, <em class="sig-param">nmax_iter=3</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.amp_train" title="Permalink to this definition">¶</a></dt>
-<dd><p>AMP Neural Network model</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="run_train.plot_fp">
-<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">plot_fp</code><span class="sig-paren">(</span><em class="sig-param">images=['train.db', 'test.db'], ampfile='amp.amp', plotfile='fingerprints.pdf'</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.plot_fp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot fingerprint plot</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="run_train.plot_parity_all">
-<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">plot_parity_all</code><span class="sig-paren">(</span><em class="sig-param">images=['train.db', 'test.db'], ampfile='amp.amp', plotfile='parity.png', ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.plot_parity_all" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot energy parity</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>images</strong> (<em>list</em>) – [‘Train.DB’, ‘TEST.DB’]</p></li>
-<li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
-<li><p><strong>plotfile</strong> (<em>str</em>) – </p></li>
-<li><p><strong>ncores</strong> (<em>int</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>rmse_all</strong> – [RMSE of train data, RMSE of test data]</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="run_train.plot_pp">
-<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">plot_pp</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">ampfile='amp.amp'</em>, <em class="sig-param">plotfile='sum.pdf'</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.plot_pp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plot parity, error, sensitivity</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="run_train.tfamp_train">
-<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">tfamp_train</code><span class="sig-paren">(</span><em class="sig-param">calc=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">amp_out='amp.amp'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.tfamp_train" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">tfamp_train</code><span class="sig-paren">(</span><em class="sig-param">calc=None</em>, <em class="sig-param">images=None</em>, <em class="sig-param">validation_images=None</em>, <em class="sig-param">amp_out='amp.amp'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.tfamp_train" title="Permalink to this definition">¶</a></dt>
 <dd><p>Keras/TensorFlow-based Neural Network model</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>calc</strong> (<em>dict</em>) – Condition for training neural network</p></li>
-<li><p><strong>images</strong> (<em>db file of</em><em> [</em><em>ASE Atoms object</em><em>]</em>) – </p></li>
+<li><p><strong>images</strong> (<em>db file</em><em> or </em><em>[</em><em>ASE Atoms object</em><em>]</em>) – </p></li>
+<li><p><strong>validation_images</strong> (<em>db file</em><em> or </em><em>[</em><em>ASE Atoms object</em><em>]</em>) – </p></li>
 <li><p><strong>amp_out</strong> (<em>str</em>) – </p></li>
 <li><p><strong>ncores</strong> (<em>int</em>) – </p></li>
 </ul>
@@ -237,6 +197,12 @@
 <dd class="field-odd"><p>None</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="run_train.tfplot_parity">
+<code class="sig-prename descclassname">run_train.</code><code class="sig-name descname">tfplot_parity</code><span class="sig-paren">(</span><em class="sig-param">images=None</em>, <em class="sig-param">sampling=None</em>, <em class="sig-param">parameters='ANN-tflow.params'</em>, <em class="sig-param">parameters_epoch=None</em>, <em class="sig-param">force_predict=False</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_train.tfplot_parity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot parity</p>
 </dd></dl>
 
 </div>

@@ -6,10 +6,9 @@ Modules
 
 .. toctree::
 
-   ANN_Parity
+   ann_modules
    Chpoint2Parms
    ann_soap
-   ann_tflow
    chk_fp
    neu_decompose_amp
    run_abinit

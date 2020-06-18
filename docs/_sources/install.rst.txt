@@ -57,10 +57,10 @@ Getting Started
 ::
 
     $ ls
-    POSCAR init_c.sh
+    POSCAR [slamdynk_init_c.sh]
 
 2. Initialize the program
 
 ::
 
-    $ bash init_c.sh
+    $ bash slamdynk_init_c.sh

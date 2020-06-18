@@ -9,12 +9,13 @@ Description
 
 - **Package name:** **S**\ elf-\ **L**\ earning **A**\ to\ **M**\ istic **DYN**\ mic tool\ **K**\ it
 - **Authors:** CNNL
-- **Release date:** 2020.03.06
+- **Release date:** 2019.06.18
 
 Changelog
 =========
 
-- 2020/03/06: ver.0.1
+- 2019/08/30: ver.1.0; Python2.x
+- 2020/06/18: ver.2.1; Python3.x
 
 License
 =======

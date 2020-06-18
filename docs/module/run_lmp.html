@@ -91,10 +91,9 @@
 <p class="caption"><span class="caption-text">Modules</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ANN_Parity.html">ANN_Parity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_modules.html">ann_modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ann_soap.html">ann_soap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ann_tflow.html">ann_tflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chk_fp.html">chk_fp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
@@ -213,14 +212,12 @@
 
 <dl class="function">
 <dt id="run_lmp.run_annlmp">
-<code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">run_annlmp</code><span class="sig-paren">(</span><em class="sig-param">infile='lmp_ann.py'</em>, <em class="sig-param">option='mc1'</em>, <em class="sig-param">mode='cluster'</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">ampfile='amp.amp'</em>, <em class="sig-param">lmpdata='data.lmp'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.run_annlmp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">run_annlmp</code><span class="sig-paren">(</span><em class="sig-param">infile='lmp_ann.py'</em>, <em class="sig-param">mode='cluster'</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">ampfile='amp.amp'</em>, <em class="sig-param">lmpdata='data.lmp'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.run_annlmp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run LAMMPS with pair_ann potential</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>infile</strong> (<em>str</em>) – filename of in-file</p></li>
-<li><p><strong>option</strong> (<em>str</em>) – ‘mc1’: swap-atom MC simulation
-‘mc2’: position moving MC simulation</p></li>
 <li><p><strong>mode</strong> (<em>str</em>) – ‘cluster’: a cluster will be cut from <em>lmpdata</em></p></li>
 <li><p><strong>condition</strong> (<em>dict</em>) – condition for MC simulation, e.g. {‘TEMP’:300, ‘RUN’:0, ‘STEPS’:100}</p></li>
 <li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
@@ -240,7 +237,7 @@
 <dl class="function">
 <dt id="run_lmp.xsf2lmp">
 <code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">xsf2lmp</code><span class="sig-paren">(</span><em class="sig-param">xsfile</em>, <em class="sig-param">lmpdata_out='data.lmp'</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.xsf2lmp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transform xsf to LAMMPS data file by <a class="reference external" href="https://atomsk.univ-lille.fr/">atomsk</a></p>
+<dd><p>Transform xsf to LAMMPS data file by <a class="reference external" href="atomsk:https://atomsk.univ-lille.fr/">atomsk</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="neu_decompose_amp" href="neu_decompose_amp.html" />
-    <link rel="prev" title="ann_tflow" href="ann_tflow.html" />
+    <link rel="prev" title="ann_soap" href="ann_soap.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -91,10 +91,9 @@
 <p class="caption"><span class="caption-text">Modules</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ANN_Parity.html">ANN_Parity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_modules.html">ann_modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ann_soap.html">ann_soap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ann_tflow.html">ann_tflow</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">chk_fp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
@@ -208,7 +207,7 @@
 
 <dl class="function">
 <dt id="chk_fp.chk_imgs_fpov">
-<code class="sig-prename descclassname">chk_fp.</code><code class="sig-name descname">chk_imgs_fpov</code><span class="sig-paren">(</span><em class="sig-param">refdb=None</em>, <em class="sig-param">overlap_atoms=None</em>, <em class="sig-param">binsize=1</em>, <em class="sig-param">ampfile=None</em>, <em class="sig-param">cv=1</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#chk_fp.chk_imgs_fpov" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">chk_fp.</code><code class="sig-name descname">chk_imgs_fpov</code><span class="sig-paren">(</span><em class="sig-param">refdb=None</em>, <em class="sig-param">overlap_atoms=None</em>, <em class="sig-param">binsize=1</em>, <em class="sig-param">ampdata=None</em>, <em class="sig-param">cv=1</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#chk_fp.chk_imgs_fpov" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check overlapping of two images’ fingerprint-histogram</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -216,7 +215,7 @@
 <li><p><strong>refdb</strong> (<em>str</em>) – </p></li>
 <li><p><strong>overlap_atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
 <li><p><strong>binsize</strong> (<em>float</em>) – </p></li>
-<li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
+<li><p><strong>ampdata</strong> (<em>amp.Amp object</em>) – </p></li>
 <li><p><strong>cv</strong> (<em>batch size of images for checking fingerprints</em>) – </p></li>
 </ul>
 </dd>
@@ -419,7 +418,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">=</span><span class="n">Cu</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># same overlap</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">),</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">atmbox</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="o">=</span><span class="n">fp_bin_box</span><span class="p">(</span><span class="n">efp_box</span><span class="p">(</span><span class="n">combine_fp</span><span class="p">(</span><span class="n">load_fp</span><span class="p">([</span><span class="n">Cu</span><span class="p">],</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)))),</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fpranges</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">records</span><span class="o">=</span><span class="n">plot_evo</span><span class="p">(</span><span class="n">evos</span><span class="o">=</span><span class="n">Evo</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;spot&#39;</span><span class="p">,</span> <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;fpplot.png&#39;</span><span class="p">,</span> <span class="n">ref2init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
@@ -428,7 +427,7 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">index_dict</span><span class="p">)</span>
 <span class="go">{0: 0, 1: 0, 2: 0, 3: 0}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># different overlap</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">),</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">atmbox</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="o">=</span><span class="n">fp_bin_box</span><span class="p">(</span><span class="n">efp_box</span><span class="p">(</span><span class="n">combine_fp</span><span class="p">(</span><span class="n">load_fp</span><span class="p">([</span><span class="n">Cu0</span><span class="p">],</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)))),</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fpranges</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">records</span><span class="o">=</span><span class="n">plot_evo</span><span class="p">(</span><span class="n">evos</span><span class="o">=</span><span class="n">Evo</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;spot&#39;</span><span class="p">,</span> <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;fpplot.png&#39;</span><span class="p">,</span> <span class="n">ref2init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
@@ -659,12 +658,14 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo</span><span class="p">,</span> <span class="n">plot_evo</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">amp</span> <span class="kn">import</span> <span class="n">Amp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo</span><span class="p">,</span> <span class="n">plot_evo</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">=</span><span class="n">Cu</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ampdata</span> <span class="o">=</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">ampdata</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">records</span><span class="o">=</span><span class="n">plot_evo</span><span class="p">(</span><span class="n">evos</span><span class="o">=</span><span class="n">Evo</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;spot&#39;</span><span class="p">,</span> <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;fpplot.png&#39;</span><span class="p">,</span> <span class="n">ref2init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
 <span class="go">[{&#39;Cu&#39;: [(1, 19), (4, 3), (9, 13), (13, 1), (14, 16), (26, 10)]}]</span>
@@ -717,12 +718,14 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo</span><span class="p">,</span> <span class="n">plot_evo_heat</span><span class="p">,</span> <span class="n">plot_evo_spot</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">amp</span> <span class="kn">import</span> <span class="n">Amp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo</span><span class="p">,</span> <span class="n">plot_evo_heat</span><span class="p">,</span> <span class="n">plot_evo_spot</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">=</span><span class="n">Cu</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ampdata</span> <span class="o">=</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">ampdata</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot_evo_heat</span><span class="p">(</span><span class="n">hist_old</span><span class="o">=</span><span class="n">Evo</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">hist_new</span><span class="o">=</span><span class="n">Evo</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">elem</span><span class="o">=</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">step_tag</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;fpheat.png&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plot_evo_spot</span><span class="p">(</span><span class="n">hist_old</span><span class="o">=</span><span class="n">Evo</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">hist_new</span><span class="o">=</span><span class="n">Evo</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">elem</span><span class="o">=</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">step_tag</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;fpspot.png&#39;</span><span class="p">)</span>
 </pre></div>
@@ -750,7 +753,7 @@
 </dl>
 <p class="rubric">Example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;atomsk&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span><span class="s1">&#39;pkgall/atomsk&#39;</span><span class="p">)</span> <span class="c1"># specify path of atomsk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;atomsk&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span><span class="s1">&#39;atomsk&#39;</span><span class="p">)</span> <span class="c1"># specify path of atomsk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">grep_dump_symb</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;dump.lmc&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fo</span><span class="p">:</span>
 <span class="gp">&gt;&gt;&gt; </span>  <span class="n">raw</span><span class="o">=</span><span class="n">fo</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
@@ -796,13 +799,13 @@
 
 <dl class="function">
 <dt id="chk_fp.sum_evo">
-<code class="sig-prename descclassname">chk_fp.</code><code class="sig-name descname">sum_evo</code><span class="sig-paren">(</span><em class="sig-param">db_seq=None</em>, <em class="sig-param">ampfile=None</em>, <em class="sig-param">binsize=1</em>, <em class="sig-param">normalized=False</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#chk_fp.sum_evo" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">chk_fp.</code><code class="sig-name descname">sum_evo</code><span class="sig-paren">(</span><em class="sig-param">db_seq=None</em>, <em class="sig-param">ampdata=None</em>, <em class="sig-param">binsize=1</em>, <em class="sig-param">normalized=False</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#chk_fp.sum_evo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Summary of evolution of images’ fingerprints</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>db_seq</strong> (<em>list</em>) – </p></li>
-<li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
+<li><p><strong>ampdata</strong> (<em>amp.Amp object</em>) – </p></li>
 <li><p><strong>binsize</strong> (<em>float</em>) – </p></li>
 <li><p><strong>normalized</strong> (<em>bool</em>) – </p></li>
 </ul>
@@ -815,12 +818,14 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">amp</span> <span class="kn">import</span> <span class="n">Amp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">=</span><span class="n">Cu</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ampdata</span> <span class="o">=</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">ampdata</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Evo</span><span class="p">)</span>
 <span class="go">[({&#39;Cu&#39;: array([[4., 0., 4., ..., 4., 4., 0.],</span>
 <span class="go">       [0., 0., 0., ..., 0., 0., 0.],</span>
@@ -856,7 +861,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>db_seq</strong> (<em>list</em>) – list of db files or [Atoms object]</p></li>
-<li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
+<li><p><strong>ampdata</strong> (<em>amp.Amp object</em>) – </p></li>
 <li><p><strong>binsize</strong> (<em>float</em>) – </p></li>
 <li><p><strong>normalized</strong> (<em>bool</em>) – normalized to [maximum, minimum]</p></li>
 </ul>
@@ -871,11 +876,13 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo_bins</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">amp</span> <span class="kn">import</span> <span class="n">Amp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo_bins</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Al</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Al&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">binsize</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">fpranges</span><span class="o">=</span><span class="n">sum_evo_bins</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Al</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ampdata</span> <span class="o">=</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binsize</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">fpranges</span><span class="o">=</span><span class="n">sum_evo_bins</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Al</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">ampdata</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">binsize</span><span class="p">)</span>
 <span class="go">1</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
@@ -900,7 +907,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>db_seq</strong> (<em>list</em>) – </p></li>
-<li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
+<li><p><strong>ampdata</strong> (<em>amp.Amp object</em>) – </p></li>
 <li><p><strong>binsize</strong> (<em>float</em>) – </p></li>
 <li><p><strong>bins</strong> (<em>dict</em>) – </p></li>
 <li><p><strong>fpranges</strong> (<em>dict</em>) – </p></li>
@@ -915,13 +922,15 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo_bins</span><span class="p">,</span> <span class="n">sum_evo_hist</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">amp</span> <span class="kn">import</span> <span class="n">Amp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.chk_fp</span> <span class="kn">import</span> <span class="n">sum_evo_bins</span><span class="p">,</span> <span class="n">sum_evo_hist</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">=</span><span class="n">Cu</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu0</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">binsize</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">fpranges</span><span class="o">=</span><span class="n">sum_evo_bins</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo_hist</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampfile</span><span class="o">=</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="n">binsize</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ampdata</span> <span class="o">=</span> <span class="n">Amp</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;amp.amp&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">binsize</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">fpranges</span><span class="o">=</span><span class="n">sum_evo_bins</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">ampdata</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Evo</span><span class="o">=</span><span class="n">sum_evo_hist</span><span class="p">(</span><span class="n">db_seq</span><span class="o">=</span><span class="p">[[</span><span class="n">Cu</span><span class="p">],[</span><span class="n">Cu0</span><span class="p">]],</span> <span class="n">ampdata</span><span class="o">=</span><span class="n">ampdata</span><span class="p">,</span> <span class="n">binsize</span><span class="o">=</span><span class="n">binsize</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">normalized</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Evo</span><span class="p">)</span>
 <span class="go">[({&#39;Cu&#39;: array([[4., 0., 4., ..., 4., 4., 0.],</span>
 <span class="go">       [0., 0., 0., ..., 0., 0., 0.],</span>
@@ -962,7 +971,7 @@
         <a href="neu_decompose_amp.html" class="btn btn-neutral float-right" title="neu_decompose_amp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ann_tflow.html" class="btn btn-neutral float-left" title="ann_tflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ann_soap.html" class="btn btn-neutral float-left" title="ann_soap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

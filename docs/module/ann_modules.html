@@ -1,0 +1,986 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ann_modules &mdash; SLAMDYNK3 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chpoint2Parms" href="Chpoint2Parms.html" />
+    <link rel="prev" title="Modules" href="module.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SLAMDYNK3
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Modules</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="module.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ann_modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chpoint2Parms.html">Chpoint2Parms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ann_soap.html">ann_soap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chk_fp.html">chk_fp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neu_decompose_amp.html">neu_decompose_amp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_abinit.html">run_abinit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_lmp.html">run_lmp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_train.html">run_train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structools.html">structools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SLAMDYNK3</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="module.html">Modules</a> &raquo;</li>
+        
+      <li>ann_modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/module/ann_modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-ann_modules">
+<span id="ann-modules"></span><h1>ann_modules<a class="headerlink" href="#module-ann_modules" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="ann_modules.ANNDataSet">
+<em class="property">class </em><code class="sig-prename descclassname">ann_modules.</code><code class="sig-name descname">ANNDataSet</code><span class="sig-paren">(</span><em class="sig-param">force_training=False</em>, <em class="sig-param">stdscaler='normalize'</em>, <em class="sig-param">elements=None</em>, <em class="sig-param">fprange=None</em>, <em class="sig-param">mean_stdev=None</em>, <em class="sig-param">Gs=None</em>, <em class="sig-param">cutoff=6.5</em>, <em class="sig-param">cores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ANNDataSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data sets of ANN models for db files.</p>
+<p>Uses AMP and ASE to get data sets for ANN models.</p>
+<dl>
+<dt>force_training: bool</dt><dd><p>Fit the model w or w/o force training. If ‘True’, the
+functions below will calculate fingerprint-primes.
+Default is False.</p>
+</dd>
+<dt>stdscaler: str</dt><dd><p>Normalize method of input fingerprints and fingerprint-primes.
+2 methods are allowed, ‘normalize’ and ‘zero_mean’. Default is
+‘normalize’.</p>
+</dd>
+<dt>elements: list</dt><dd><p>A list contains all types of element in training sets.</p>
+</dd>
+<dt>fprange: dict</dt><dd><p>A Dictionary contains range of each fingerprint for all
+elements. Which is needed by normalize method.</p>
+</dd>
+<dt>mean_stdev: dict</dt><dd><p>A Dictionary contains mean and standard deviatiob of each
+fingerprint for all elements. Which is needed by zero_mean
+method.</p>
+</dd>
+<dt>Gs: dict or list or None</dt><dd><p>Dictionary of symbols and lists of dictionaries for making symmetry
+functions. Either auto-genetrated by AMP, or given in the following
+form, E.g.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Gs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Te&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;G2&quot;</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">:</span><span class="s2">&quot;O&quot;</span><span class="p">,</span> <span class="s2">&quot;eta&quot;</span><span class="p">:</span><span class="mf">10.</span><span class="p">},</span>
+<span class="go">                 {&quot;type&quot;:&quot;G4&quot;, &quot;elements&quot;:[&quot;O&quot;, &quot;Au&quot;],</span>
+<span class="go">                  &quot;eta&quot;:5., &quot;gamma&quot;:1., &quot;zeta&quot;:1.0}],</span>
+<span class="go">          &quot;Bi&quot;: [{&quot;type&quot;:&quot;G2&quot;, &quot;element&quot;:&quot;O&quot;, &quot;eta&quot;:2.},</span>
+<span class="go">                 {&quot;type&quot;:&quot;G4&quot;, &quot;elements&quot;:[&quot;O&quot;, &quot;Au&quot;],</span>
+<span class="go">                  &quot;eta&quot;:2., &quot;gamma&quot;:1., &quot;zeta&quot;:5.0}]}</span>
+</pre></div>
+</div>
+<p>You can use amp.model.gaussian.make_symmetry_functions to help create
+these lists of dictionaries. Default is None.</p>
+</dd>
+<dt>cutoff: float</dt><dd><p>Cutoff represent the radius above which neighbor interactions
+are ignored. Default is 6.5 Angstroms.</p>
+</dd>
+<dt>cores: int</dt><dd><p>The number of iterations allowed tensorflow probability l-bfgs
+optimizer and AMP calculator to run in parallel. Default is 1.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ann_modules.ANNDataSet.amp_afp_derafp">
+<code class="sig-name descname">amp_afp_derafp</code><span class="sig-paren">(</span><em class="sig-param">aseDB</em>, <em class="sig-param">sampling</em>, <em class="sig-param">validation=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ANNDataSet.amp_afp_derafp" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculate fingerprints, fingerprint-primes,
+real Energy, and real forces by given ASE db.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aseDB</strong> – ASE db of ASE atoms objects.</p></li>
+<li><p><strong>sampling</strong> – A str or int about sampling method of data
+point in images.</p></li>
+<li><p><strong>validation</strong> – A bool to control if validation set is
+calculating. Set ‘True’ to calculate
+validation sets, and ‘False’ to calculate
+training sets</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A dictionary of fingerprints that will be</dt><dd><p>used to construct the input data format of
+tensorflow-keras model.</p>
+</dd>
+<dt>fingerprintprimes: A dictionary of fingerprint-primes that</dt><dd><p>will be used to construct the input data
+format of tensorflow-keras model.</p>
+</dd>
+<dt>trueEnergy: A list of real energies taht will be used as</dt><dd><p>training labels.</p>
+</dd>
+<dt>trueForce: A list of real forces taht will be used as training</dt><dd><p>labels.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>fingerprints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.ANNDataSet.element_scaling_and_fplen">
+<code class="sig-name descname">element_scaling_and_fplen</code><span class="sig-paren">(</span><em class="sig-param">fingerprints</em>, <em class="sig-param">imgAtomEnergy</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ANNDataSet.element_scaling_and_fplen" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating scaling anf fingerprint length for
+each type of element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fingerprints</strong> – A dict of element fingerprint list.</p></li>
+<li><p><strong>imgAtomEnergy</strong> – A list of energy per atom of images in training set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.ANNDataSet.get_data">
+<code class="sig-name descname">get_data</code><span class="sig-paren">(</span><em class="sig-param">images</em>, <em class="sig-param">sampling</em>, <em class="sig-param">validation=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ANNDataSet.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function getting training/validation/calculation inputs and labels.
+Such as input_afp, input_derafp, input_scaling, E_true, F_true, imgAtomNums, totalImages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>images</strong> – ASE db of ASE atoms objects.</p></li>
+<li><p><strong>sampling</strong> – A str or int about sampling method of data
+point in images.</p></li>
+<li><p><strong>validation</strong> – A bool, set True to calculate validation data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A dict of lists, which contain K.variable of input</dt><dd><p>fingerprints.</p>
+</dd>
+<dt>input_derafp: A dict of lists, which contain K.variable of</dt><dd><p>input fingerprint-primes.</p>
+</dd>
+<dt>energy_map: A K.variable of energy map which contains location</dt><dd><p>of gost atoms.</p>
+</dd>
+</dl>
+<p>E_true: A 1D array of real atomic energy.</p>
+<p>F_true: A 2D array of real forces.</p>
+<p>totalImages: Num of total images of training/validation sets.</p>
+<dl class="simple">
+<dt>force_zeros: A array with the same shape as images forces, which</dt><dd><p>is constructed by 0s.</p>
+</dd>
+</dl>
+<p>imgAtomNum: A list of atom num of each image.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>input_afp</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.ANNDataSet.get_fingerprintprimes">
+<code class="sig-name descname">get_fingerprintprimes</code><span class="sig-paren">(</span><em class="sig-param">ins</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ANNDataSet.get_fingerprintprimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function restructuring fingerprint-primes to a new
+structure that can use to create the ANN input easily</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ins</strong> – A list of fingerprint-primes of all images in
+training sets.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of restructured fingerprint-primes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>fingerprintprimes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.ANNDataSet.get_fingerprints">
+<code class="sig-name descname">get_fingerprints</code><span class="sig-paren">(</span><em class="sig-param">ins</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ANNDataSet.get_fingerprints" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function restructuring fingerprints to a new structure
+that can use to create the ANN input easily</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ins</strong> – A list of fingerprints of all images in training sets.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of restructured fingerprints.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>fingerprints</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ann_modules.Calculation">
+<em class="property">class </em><code class="sig-prename descclassname">ann_modules.</code><code class="sig-name descname">Calculation</code><span class="sig-paren">(</span><em class="sig-param">elements=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Calculation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculators of energy and force.</p>
+<dl class="simple">
+<dt>elements: list</dt><dd><p>A list of all types of elements.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ann_modules.Calculation.energy_cal">
+<code class="sig-name descname">energy_cal</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">afp_ins</em>, <em class="sig-param">energy_map</em>, <em class="sig-param">L_hidden</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Calculation.energy_cal" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating atomic energies .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – An instance of a tensorflow/keras ANN model.</p></li>
+<li><p><strong>afp_ins</strong> – A tf.constant tensor of standardization fingerprints.</p></li>
+<li><p><strong>energy_map</strong> – A tf.constant tensor of map recording ghost atoms
+in energy tensor.</p></li>
+<li><p><strong>L_hidden</strong> – A dictionary of all hidden layers.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of atomic energies of each image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>energy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Calculation.energy_fn">
+<code class="sig-name descname">energy_fn</code><span class="sig-paren">(</span><em class="sig-param">y_pred</em>, <em class="sig-param">y_true</em>, <em class="sig-param">totalImages</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Calculation.energy_fn" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating loss, rmse, and nax residue of energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_pred</strong> – A list of model prediction of atomic energies.</p></li>
+<li><p><strong>y_true</strong> – A list of real atomic energies.</p></li>
+<li><p><strong>totalImages</strong> – An int of number of data sets.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list which is [loss, rmse, maxresid] of energy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Calculation.energy_force_cal">
+<code class="sig-name descname">energy_force_cal</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">f_zero</em>, <em class="sig-param">afp_ins</em>, <em class="sig-param">derafp_ins</em>, <em class="sig-param">energy_map</em>, <em class="sig-param">L_hidden</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Calculation.energy_force_cal" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating atomic energies and forces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – An instance of a tensorflow/keras ANN model.</p></li>
+<li><p><strong>f_zero</strong> – A tf.Variable 0 tensor of the shape of force.</p></li>
+<li><p><strong>afp_ins</strong> – A tf.constant tensor of standardization fingerprints.</p></li>
+<li><p><strong>derafp_ins</strong> – A tf.constant tensor of standardization
+fingerprint-primes.</p></li>
+<li><p><strong>energy_map</strong> – A tf.constant tensor of map recording ghost atoms
+in energy tensor.</p></li>
+<li><p><strong>L_hidden</strong> – A dictionary of all hidden layers.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A list of atomic energies of each image.</p>
+<p>force: A list of forces of each image.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>energy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Calculation.force_fn">
+<code class="sig-name descname">force_fn</code><span class="sig-paren">(</span><em class="sig-param">y_pred</em>, <em class="sig-param">y_true</em>, <em class="sig-param">totalImages</em>, <em class="sig-param">imgAtomN</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Calculation.force_fn" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating loss, rmse, and nax residue of force.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_pred</strong> – A list of model prediction of forces.</p></li>
+<li><p><strong>y_true</strong> – A list of real forces.</p></li>
+<li><p><strong>totalImages</strong> – An int of number of data sets.</p></li>
+<li><p><strong>imgAtomN</strong> – A list of numbers of atom in each image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list which is [loss, rmse, maxresid] of force.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ann_modules.NeuralNetwork">
+<em class="property">class </em><code class="sig-prename descclassname">ann_modules.</code><code class="sig-name descname">NeuralNetwork</code><span class="sig-paren">(</span><em class="sig-param">images=None</em>, <em class="sig-param">sampling=None</em>, <em class="sig-param">validation_images=None</em>, <em class="sig-param">validation_sampling=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">parameters_epoch=None</em>, <em class="sig-param">action='training'</em>, <em class="sig-param">hiddenlayers=(5</em>, <em class="sig-param">5)</em>, <em class="sig-param">cores=1</em>, <em class="sig-param">stdscaler='normalize'</em>, <em class="sig-param">Gs=None</em>, <em class="sig-param">cutoff=6.5</em>, <em class="sig-param">multi_gpus=False</em>, <em class="sig-param">gpu_max_usage=None</em>, <em class="sig-param">energy_coefficient=1.0</em>, <em class="sig-param">force_coefficient=0.04</em>, <em class="sig-param">convergenceCriteria={'energy_maxresid': None</em>, <em class="sig-param">'energy_rmse': 0.001</em>, <em class="sig-param">'force_maxresid': None</em>, <em class="sig-param">'force_rmse': None}</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>TensorFlow-based Neural Network model.</p>
+<p>Uses TensorFlow 2.0 to construct a neural network. This
+method also allows for GPU acceleration.</p>
+<dl>
+<dt>images: str</dt><dd><p>List of ASE atoms objects that are being trained.</p>
+</dd>
+<dt>sampling: str or int</dt><dd><p>A str or int about sampling method of data point
+in images. E.g. 100, ‘50:500’, ‘0:500:2’. Default
+is None.</p>
+</dd>
+<dt>validation_images: str</dt><dd><p>List of ASE atoms objects that are being validated
+while training. Default is None.</p>
+</dd>
+<dt>validation_sampling: str or int</dt><dd><p>A str or int about sampling method of data point
+in validation_images. Default is None.</p>
+</dd>
+<dt>parameters: str</dt><dd><p>File of AMP or ANN-tflow that contains parameters.
+Default is None.</p>
+</dd>
+<dt>parameters_epoch: int</dt><dd><p>Epoch of weights in the checkpoint file that you want
+to use as initial weights. Default is None.</p>
+</dd>
+<dt>action: str</dt><dd><p>The action you want to do with the class NeuralNetwork.
+Set “training” to fit an ANN model, “calculation” to
+predict energy and forces with given parameters. Default
+is “training”.</p>
+</dd>
+<dt>hiddenlayers: tuple or dict</dt><dd><p>Structure of the neural network. Can either be in the format
+(int,int,int), where each element represnts the size of a layer
+and there and the length of the list is the number of layers,
+or dictionary format of the network structure for each element
+type. E.g. {‘Cu’: (10, 5, 5), ‘Pt’: (10, 5)}. Default is (5, 5).</p>
+</dd>
+<dt>cores: int</dt><dd><p>The number of iterations allowed tensorflow probability l-bfgs
+optimizer and AMP calculator to run in parallel. Default is 1.</p>
+</dd>
+<dt>stdscaler: str</dt><dd><p>Normalize method of input fingerprints and fingerprint-primes.
+2 methods are allowed, ‘normalize’ and ‘zero_mean’. Default is
+‘normalize’.</p>
+</dd>
+<dt>Gs: dict or list or None</dt><dd><p>Dictionary of symbols and lists of dictionaries for making symmetry
+functions. Either auto-genetrated by AMP, or given in the following
+form, E.g.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Gs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Te&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;G2&quot;</span><span class="p">,</span> <span class="s2">&quot;element&quot;</span><span class="p">:</span><span class="s2">&quot;O&quot;</span><span class="p">,</span> <span class="s2">&quot;eta&quot;</span><span class="p">:</span><span class="mf">10.</span><span class="p">},</span>
+<span class="go">                 {&quot;type&quot;:&quot;G4&quot;, &quot;elements&quot;:[&quot;O&quot;, &quot;Au&quot;],</span>
+<span class="go">                  &quot;eta&quot;:5., &quot;gamma&quot;:1., &quot;zeta&quot;:1.0}],</span>
+<span class="go">          &quot;Bi&quot;: [{&quot;type&quot;:&quot;G2&quot;, &quot;element&quot;:&quot;O&quot;, &quot;eta&quot;:2.},</span>
+<span class="go">                 {&quot;type&quot;:&quot;G4&quot;, &quot;elements&quot;:[&quot;O&quot;, &quot;Au&quot;],</span>
+<span class="go">                  &quot;eta&quot;:2., &quot;gamma&quot;:1., &quot;zeta&quot;:5.0}]}</span>
+</pre></div>
+</div>
+<p>You can use amp.model.gaussian.make_symmetry_functions to help create
+these lists of dictionaries. Default is None.</p>
+</dd>
+<dt>cutoff: float</dt><dd><p>Cutoff represent the radius above which neighbor interactions
+are ignored. Default is 6.5 Angstroms.</p>
+</dd>
+<dt>multi_gpus: bool</dt><dd><p>Set this to True allows using multiple GPUs in training procedure.
+Default is False.</p>
+</dd>
+<dt>gpu_max_usage: int</dt><dd><p>Maximum memory (in MB) to allocate on the GPUs device. None to use
+all GPUs device memories. Default is None.</p>
+</dd>
+<dt>energy_coefficient<span class="classifier">float</span></dt><dd><p>Used to adjust the loss function; this is the initial weight
+applied to the energy component. Default is 1.0.</p>
+</dd>
+<dt>force_coefficient<span class="classifier">float or None</span></dt><dd><p>Used to adjust the loss function; this is the initial weight applied
+to the force component. Default is 0.04.</p>
+</dd>
+<dt>convergenceCriteria: dict</dt><dd><p>Dictionary of convergence criteria, analogous to the main AMP
+convergence criteria dictionary. Default is
+{‘energy_rmse’: 0.001, ‘energy_maxresid’: None, ‘force_rmse’ : None,  ‘force_maxresid’ : None}
+Note: you can turn off force training by setting both ‘force_rmse’ and
+‘force_maxresid’ to None.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.calculate_energy">
+<code class="sig-name descname">calculate_energy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.calculate_energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating energies with the model parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>A dictionary of energies. E.g.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">energy</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;training&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span> <span class="n">ndarray</span> <span class="n">of</span> <span class="n">energies</span><span class="p">],</span>
+<span class="go">              &#39;validation&#39;: [numpy ndarray of energies]}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">energy</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;calculation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span> <span class="n">ndarray</span> <span class="n">of</span> <span class="n">energies</span><span class="p">]}</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>energy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.calculate_force">
+<code class="sig-name descname">calculate_force</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.calculate_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating forces with the model parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>A dictionary of forces. E.g.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">forces</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;training&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span> <span class="n">ndarray</span> <span class="n">of</span> <span class="n">forces</span><span class="p">],</span>
+<span class="go">              &#39;validation&#39;: [numpy ndarray of forces]}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">forces</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;calculation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">numpy</span> <span class="n">ndarray</span> <span class="n">of</span> <span class="n">forces</span><span class="p">]}</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>forces</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.get_parameters">
+<code class="sig-name descname">get_parameters</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.get_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function getting parameters from the given parameter file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file</strong> – A file contains ANN-tflow parameters in it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.model_creator">
+<code class="sig-name descname">model_creator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.model_creator" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function creating a Keras machine learning model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A tensorflow-keras ANN model.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.prev_process">
+<code class="sig-name descname">prev_process</code><span class="sig-paren">(</span><em class="sig-param">action='training'</em>, <em class="sig-param">batch=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.prev_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function doing previous process of training and calculation
+values to get data sets. Get and calculate fingerprints and
+fingerprint-primes from ase db files, then transform the format to
+which our tensorflow ANN model needs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>action</strong> – “training”/”calculation”, action of class NeuralNetwork.</p></li>
+<li><p><strong>batch</strong> – An int of batch size. None to train w/o batch training.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.tf_setting">
+<code class="sig-name descname">tf_setting</code><span class="sig-paren">(</span><em class="sig-param">gpu_max_usage</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.tf_setting" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function setting basic settings of tensorflow, such as
+numerical precises and maximum GPU memory usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gpu_max_usage</strong> – Maximum memory (in MB) to allocate on the
+GPUs device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><em class="sig-param">optimizer='l-bfgs'</em>, <em class="sig-param">batch=None</em>, <em class="sig-param">checkpoint=1000</em>, <em class="sig-param">maxEpochs=100000</em>, <em class="sig-param">lbfgs_correction_pairs=10000</em>, <em class="sig-param">learning_rate=0.001</em>, <em class="sig-param">amsgrad=False</em>, <em class="sig-param">elastic_net_lambda=None</em>, <em class="sig-param">elastic_net_alpha=0.0</em>, <em class="sig-param">gradient_noise=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.train" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function fitting the model parameters such that the fingerprints
+and fingerprint-primes can be used to describe the energies and forces
+in trainingimages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>optimizer</strong> – 2 methods, l-bfgs and adam, are allowed. Default is l-bfgs.</p></li>
+<li><p><strong>batch</strong> – An int of batch size. None to train w/o batch training.</p></li>
+<li><p><strong>checkpoint</strong> – An int refer to the frequency to save a checkpoint
+in training loop, which means the epoch gap between
+two checkpoints, Default is 1,000.</p></li>
+<li><p><strong>maxEpochs</strong> – An int refer to maximum number of times to loop through
+the training data before giving up. Default is 1,000,000.</p></li>
+<li><p><strong>lbfgs_correction_pairs</strong> – An int specifies the maximum number of
+(position_delta, gradient_delta) correction
+pairs to keep as implicit approximation of
+the Hessian matrix in tensorflow probability
+l-bfgs optimizer. Default is 10,000.</p></li>
+<li><p><strong>learning_rate</strong> – A Tensor or a floating point value. The learning rate
+for adam only. Default is 0.001</p></li>
+<li><p><strong>amsgrad</strong> – A bool. Whether to apply AMSGrad variant of this algorithm
+from the paper “On the Convergence of Adam and beyond”.</p></li>
+<li><p><strong>elastic_net_lambda</strong> – A float or None. A postive coefficient of elastic
+net regularization, which can avoid overfitting.
+Set None to avoid using regularization in training
+procedure. Default is None.</p></li>
+<li><p><strong>elastic_net_alpha</strong> – <p>A float. A coefficient of elastic net regularization,
+which is between 0 and 1.
+elastic_net_alpha = 0 for use only L2 regularization,
+elastic_net_alpha = 1 for use only L1 regularization,
+elastic_net_alpha = 0.X for use a combination of both</p>
+<blockquote>
+<div><p>L1 and L2.</p>
+</div></blockquote>
+<p>Default is 0.</p>
+</p></li>
+<li><p><strong>gradient_noise</strong> – A bool, set True to include noise in gradients to avoid
+gradient vanishing and exploding problems, which seems
+like that happen often in a very deep neuralnetwork.
+Default is False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.NeuralNetwork.train_logs">
+<code class="sig-name descname">train_logs</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.NeuralNetwork.train_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function recording logs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> – State of training procedure which is a flag to
+decide which kind of log format should be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ann_modules.ParityPlot">
+<em class="property">class </em><code class="sig-prename descclassname">ann_modules.</code><code class="sig-name descname">ParityPlot</code><span class="sig-paren">(</span><em class="sig-param">images=None</em>, <em class="sig-param">sampling=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">parameters_epoch=None</em>, <em class="sig-param">force_predict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ParityPlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate and Plot Parities.</p>
+<dl class="simple">
+<dt>images: str</dt><dd><p>List of ASE atoms objects that are being trained.</p>
+</dd>
+<dt>sampling: str or int</dt><dd><p>A str or int about sampling method of data point
+in images. E.g. 100, ‘50:500’, ‘0:500:2’. Default
+is None.</p>
+</dd>
+<dt>parameters: str</dt><dd><p>File of AMP or ANN-tflow that contains parameters.
+Default is None.</p>
+</dd>
+<dt>parameters_epoch: int</dt><dd><p>Epoch of weights in the checkpoint file that you want
+to use as initial weights. Default is None.</p>
+</dd>
+<dt>force_predict: bool</dt><dd><p>Force prediction. Default is False.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ann_modules.ParityPlot.Energy_Parity">
+<code class="sig-name descname">Energy_Parity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ParityPlot.Energy_Parity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating and ploting energy parities.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.ParityPlot.Force_Parity">
+<code class="sig-name descname">Force_Parity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.ParityPlot.Force_Parity" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating and ploting force parities.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ann_modules.Training">
+<em class="property">class </em><code class="sig-prename descclassname">ann_modules.</code><code class="sig-name descname">Training</code><span class="sig-paren">(</span><em class="sig-param">model, HL=None, elements=None, force_training=False, batch_training=False, coefficient=[1.0, 0.04], convergenceCriteria=None, totalImages=None, v_totalImages=None, descriptor_parameters=None, stdscaler='normalize', fprange=None, mean_stdev=None, hidden_layers_struct=None, multi_gpus=False, gpus=None, validation=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main functions of training loops.</p>
+<dl class="simple">
+<dt>model: tensorflow/keras model</dt><dd><p>An instance of a tensorflow/keras ANN model.</p>
+</dd>
+<dt>HL: dict</dt><dd><p>A dictionary of all hidden layers.</p>
+</dd>
+<dt>elements: list</dt><dd><p>A list of all types of elements.</p>
+</dd>
+<dt>force_training: bool</dt><dd><p>Fit the model w or w/o force training. Default is False.</p>
+</dd>
+<dt>batch_training: bool</dt><dd><p>Fit the model w or w/o batch training. Default is False.</p>
+</dd>
+<dt>coefficient: list</dt><dd><p>A list of int used to adjust the loss function; this is the
+weights applied to the energy and force components.
+E.g. [1.0, 0.04]</p>
+</dd>
+<dt>convergenceCriteria: dict</dt><dd><p>Dictionary of convergence criteria, analogous to the main AMP
+convergence criteria dictionary.</p>
+</dd>
+<dt>totalImages: int</dt><dd><p>A int of total images of training set.</p>
+</dd>
+<dt>v_totalImages: int</dt><dd><p>A int of total images of validation set.</p>
+</dd>
+<dt>descriptor_parameters: dict</dt><dd><p>A dictionary of Gaussian parameters from AMP calculator.</p>
+</dd>
+<dt>stdscaler: str</dt><dd><p>Normalize method of input fingerprints and fingerprint-primes.
+2 methods are allowed, ‘normalize’ and ‘zero_mean’. Default is
+‘normalize’.</p>
+</dd>
+<dt>fprange: dict</dt><dd><p>A Dictionary contains range of each fingerprint for all
+elements. Which is needed by normalize method.</p>
+</dd>
+<dt>mean_stdev: dict</dt><dd><p>A Dictionary contains mean and standard deviatiob of each
+fingerprint for all elements. Which is needed by zero_mean
+method.</p>
+</dd>
+<dt>hidden_layers_struct: dict of tuples</dt><dd><p>A dictionary of tuples contains the structure of the neural network
+for each type of elements. E.g. {‘Cu’: (10, 5, 5), ‘Pt’: (10, 5)}.</p>
+</dd>
+<dt>multi_gpus: bool</dt><dd><p>Set this to True allows using multiple GPUs in training procedure.
+Default is False.</p>
+</dd>
+<dt>gpus: list</dt><dd><p>A list of GPU names that can be used by tensorflow.</p>
+</dd>
+<dt>validation: bool</dt><dd><p>A bool to control if validation set should be calculated.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ann_modules.Training.anealing_gradient_noise">
+<code class="sig-name descname">anealing_gradient_noise</code><span class="sig-paren">(</span><em class="sig-param">epoch</em>, <em class="sig-param">grads</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training.anealing_gradient_noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function adding noise into the gradients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epoch</strong> – An int32 of current epoch.</p></li>
+<li><p><strong>grads</strong> – A list of gradients.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of noises added gradients.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>grads</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Training.ann_checkpoint">
+<code class="sig-name descname">ann_checkpoint</code><span class="sig-paren">(</span><em class="sig-param">params_1d</em>, <em class="sig-param">epoch</em>, <em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training.ann_checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function recording checkpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params_1d</strong> – A 1D tf.Tensor representing the model’s trainable
+parameters.</p></li>
+<li><p><strong>epoch</strong> – An int32 of current epoch.</p></li>
+<li><p><strong>state</strong> – A state of training procedure which is a flag to decide
+which kind of checkpointformat should be used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Training.ann_training_fn">
+<code class="sig-name descname">ann_training_fn</code><span class="sig-paren">(</span><em class="sig-param">ins</em>, <em class="sig-param">valid</em>, <em class="sig-param">gradients</em>, <em class="sig-param">f_training</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training.ann_training_fn" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating with multiple GPUs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ins</strong> – A list of input contains training and validation
+distributed data sets.</p></li>
+<li><p><strong>valid</strong> – A bool to decide if validation should be involved.</p></li>
+<li><p><strong>gradients</strong> – A bool to decide if gradients calculation should be involved.</p></li>
+<li><p><strong>f_training</strong> – A bool to decide if force training should be involved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A float64 values of loss.</p>
+<p>grads: A list of gradients.</p>
+<p>CONVFLAG: A bool infers to the convergence of training.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>loss_value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ann_modules.Training.assign_new_model_parameters">
+<code class="sig-name descname">assign_new_model_parameters</code><a class="headerlink" href="#ann_modules.Training.assign_new_model_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function updating the model’s parameters with a 1D tf.Tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params_1d</strong> – A 1D tf.Tensor representing the model’s trainable parameters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Training.elastic_net">
+<code class="sig-name descname">elastic_net</code><span class="sig-paren">(</span><em class="sig-param">enet_lambda</em>, <em class="sig-param">alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training.elastic_net" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating lambda*((1-a)/2 * L2 + a * L1) for
+regularization.</p>
+<p>a = 0     : only L2 regulariztion
+a = 1     : only L1 regulariztion
+0 &lt; a &lt; 1 : elastic net, combination of both L1 and L2 regularization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enet_lambda</strong> – A float64 of strength of elastic net.</p></li>
+<li><p><strong>alpha</strong> – A float64 of coefficient alpha in elastic net, which is
+between 0 and 1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A float64 of elastic net regularization loss.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>L</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Training.opt_fn">
+<code class="sig-name descname">opt_fn</code><span class="sig-paren">(</span><em class="sig-param">train_ins</em>, <em class="sig-param">checkpoint=1000</em>, <em class="sig-param">elastic_net_lambda=None</em>, <em class="sig-param">elastic_net_alpha=0.0</em>, <em class="sig-param">gradient_noise=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training.opt_fn" title="Permalink to this definition">¶</a></dt>
+<dd><p>A factory to create a function required by tfp.optimizer.lbfgs_minimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>train_ins</strong> – The input and output part of training data.</p></li>
+<li><p><strong>checkpoint</strong> – An int about frequency to save a checkpoint in training loop.</p></li>
+<li><p><strong>elastic_net_lambda</strong> – A float64 of strength of elastic net.</p></li>
+<li><p><strong>elastic_net_alpha</strong> – A float64 of coefficient alpha in elastic net, which is
+between 0 and 1.</p></li>
+<li><p><strong>gradient_noise</strong> – A bool to include noise in gradients to avoid gradient
+vanishing and exploding problems.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>loss_value, gradients = f(model_parameters).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A function that has a signature of</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ann_modules.Training.replica_step">
+<code class="sig-name descname">replica_step</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">HL</em>, <em class="sig-param">t_img</em>, <em class="sig-param">coeff</em>, <em class="sig-param">f_training</em>, <em class="sig-param">dist_dataset</em>, <em class="sig-param">gradients</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_modules.Training.replica_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function calculating loss, gradients, root-mean-square errors, and
+maximun residues of each replication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – An instance of a tensorflow/keras ANN model.</p></li>
+<li><p><strong>HL</strong> – A dictionary of all hidden layers.</p></li>
+<li><p><strong>t_img</strong> – An int of total images of all data set.</p></li>
+<li><p><strong>coeff</strong> – A list of int used to adjust the loss function; this
+is the weights applied to the energy and force components.</p></li>
+<li><p><strong>f_training</strong> – A bool to decide if force training should be involved.</p></li>
+<li><p><strong>dist_dataset</strong> – A list of distributed data set.</p></li>
+<li><p><strong>gradients</strong> – A bool to decide if gradients calculation should be involved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A float64 loss of replication.</p>
+<p>grads: A list of gradients of replication.</p>
+<p>e_mse: A float64 of energy mean-square error of replication.</p>
+<p>e_max: A float64 of energy max residue of replication.</p>
+<p>f_mse: A float64 of force mean-square error of replication.</p>
+<p>f_max: A float64 of force max residue of replication.</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>loss</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Chpoint2Parms.html" class="btn btn-neutral float-right" title="Chpoint2Parms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="module.html" class="btn btn-neutral float-left" title="Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, CNNL
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
