@@ -359,6 +359,37 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="structools.min_dist_ary">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">min_dist_ary</code><span class="sig-paren">(</span><em class="sig-param">atoms_host=None</em>, <em class="sig-param">atoms_overlap=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.min_dist_ary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate minimum distance between each atom of overlap-atoms to host-atom</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms_host</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>atoms_overlap</strong> (<em>ASE Atoms object</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>idd_ary</strong> – list of (index, distance) pairs</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">min_dist_ary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">min_dist_ary</span><span class="p">(</span><span class="n">Cu</span><span class="p">,</span> <span class="n">Cu</span><span class="p">)</span>
+<span class="go">[(0, 0.0), (1, 0.0), (2, 0.0), (3, 0.0)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">min_dist_ary</span><span class="p">(</span><span class="n">Ag</span><span class="p">,</span> <span class="n">Cu</span><span class="p">)</span>
+<span class="go">[(0, 0.0), (1, 0.33941125496954283), (2, 0.33941125496954283), (3, 0.33941125496954283)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="structools.multi_call">
 <code class="sig-prename descclassname">structools.</code><code class="sig-name descname">multi_call</code><span class="sig-paren">(</span><em class="sig-param">ncall=1</em>, <em class="sig-param">check_duplicate=False</em>, <em class="sig-param">max_call=10000</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.multi_call" title="Permalink to this definition">¶</a></dt>
 <dd><p>Call function with multiple times</p>
@@ -387,6 +418,107 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 <span class="go">-&gt; Generate struct wo duplicate</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Ann</span><span class="p">)</span>
 <span class="go">[Atoms(symbols=&#39;Fe2CoFeCoFeCo2Ni4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74]), Atoms(symbols=&#39;Fe4Co2CrCoNi4CrCoCr2&#39;, pbc=True, cell=[5.74, 5.74, 5.74]), Atoms(symbols=&#39;Fe2CoFeCo2FeCoNi4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74])]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.overlap_cluster">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">overlap_cluster</code><span class="sig-paren">(</span><em class="sig-param">matrix=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">rc_indexes=0</em>, <em class="sig-param">radius=6.5</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.overlap_cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cut cluster and overlap into matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> (<em>ASE Atoms object</em>) – to be replaced with cluster</p></li>
+<li><p><strong>cluster</strong> (<em>ASE Atoms object</em>) – to be cut into cluster</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>overlap_list</strong> – list of matrix-atoms replaced by cluster-atoms with constraint</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of [ASE Atoms object]</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">overlap_cluster</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ag_matrix</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu_overlap</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">overlap_list</span> <span class="o">=</span> <span class="n">overlap_cluster</span><span class="p">(</span><span class="n">Ag_matrix</span><span class="p">,</span> <span class="n">Cu_overlap</span><span class="p">,</span> <span class="n">rc_indexes</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">radius</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">&gt;&gt; Move Atom(&#39;Cu&#39;, [0.0, 0.0, 0.0], index=0) to the cluster center!</span>
+<span class="go">--&gt; Atoms(symbols=&#39;Cu13&#39;, pbc=True, cell=[10.83, 10.83, 10.83])</span>
+<span class="go">&gt;&gt; Move Atom(&#39;Cu&#39;, [0.0, 1.805, 1.805], index=1) to the cluster center!</span>
+<span class="go">--&gt; Atoms(symbols=&#39;Cu13&#39;, pbc=True, cell=[10.83, 10.83, 10.83])</span>
+<span class="go">&gt;&gt; Replace atoms and set constraint ...</span>
+<span class="go">--&gt; Atoms(symbols=&#39;Ag95Cu13&#39;, pbc=True, cell=[12.27, 12.27, 12.27], constraint=FixAtoms(indices=[7, 18, 41, 52, 14, 37, 6, 40, 2, 5, 16, 1, 4]))</span>
+<span class="go">&gt;&gt; Replace atoms and set constraint ...</span>
+<span class="go">--&gt; Atoms(symbols=&#39;Ag95Cu13&#39;, pbc=True, cell=[12.27, 12.27, 12.27], constraint=FixAtoms(indices=[7, 41, 52, 18, 2, 40, 37, 6, 14, 4, 1, 5, 16]))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.overlap_sites">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">overlap_sites</code><span class="sig-paren">(</span><em class="sig-param">atoms_host=None</em>, <em class="sig-param">atoms_overlap=None</em>, <em class="sig-param">mode='pos'</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.overlap_sites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift overlap-atoms to an atom-site to minimize distance differences from host-atoms</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms_host</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>atoms_overlap</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>mode</strong> (<em>'pos'</em><em> [</em><em>todo</em><em>]</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>site_ids</strong> (<em>list</em>) – list of ids of host-atom to be replaced</p></li>
+<li><p><strong>atoms_shift</strong> (<em>ASE Atoms object</em>) – atoms_overlap with shifted positions</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">overlap_sites</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">overlap_sites</span><span class="p">(</span><span class="n">Ag</span><span class="p">,</span> <span class="n">Cu</span><span class="p">)</span>
+<span class="go">([0, 1, 2, 3], Atoms(symbols=&#39;Cu4&#39;, pbc=True, cell=[3.61, 3.61, 3.61]))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">overlap_sites</span><span class="p">(</span><span class="n">Ag</span><span class="p">,</span> <span class="n">Cu</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="go">No match!</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="structools.replace_atoms">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">replace_atoms</code><span class="sig-paren">(</span><em class="sig-param">atoms_host=None</em>, <em class="sig-param">atoms_overlap=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.replace_atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace host-atoms by overlap-atoms with constraint</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms_host</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>atoms_overlap</strong> (<em>ASE Atoms object</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atoms_rep</strong> – host-atoms replaced by overlap-atoms with constraint</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">replace_atoms</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">Atoms(symbols=&#39;Ag32&#39;, pbc=True, cell=[8.18, 8.18, 8.18])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">atoms_rep</span> <span class="o">=</span> <span class="n">replace_atoms</span><span class="p">(</span><span class="n">Ag</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">Cu</span><span class="p">)</span>
+<span class="go">&gt;&gt; Replace atoms and set constraint ...</span>
+<span class="go">--&gt; Atoms(symbols=&#39;Cu4Ag28&#39;, pbc=True, cell=[8.18, 8.18, 8.18], constraint=FixAtoms(indices=[0, 1, 2, 3]))</span>
 </pre></div>
 </div>
 </dd></dl>
