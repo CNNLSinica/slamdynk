@@ -208,7 +208,7 @@
 
 <dl class="function">
 <dt id="utilities.combine_db">
-<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">combine_db</code><span class="sig-paren">(</span><em class="sig-param">dbfiles=None</em>, <em class="sig-param">index_string='::'</em>, <em class="sig-param">db_out='all.db'</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.combine_db" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">utilities.</code><code class="sig-name descname">combine_db</code><span class="sig-paren">(</span><em class="sig-param">dbfiles=None</em>, <em class="sig-param">index_string='::'</em>, <em class="sig-param">db_out='all.db'</em>, <em class="sig-param">ichk_calc=True</em><span class="sig-paren">)</span><a class="headerlink" href="#utilities.combine_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combine ASE db files</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -216,6 +216,7 @@
 <li><p><strong>dbfiles</strong> (<em>str</em><em> or </em><em>list</em>) – <em>str</em> for specfied directory, list for list of filenames</p></li>
 <li><p><strong>index_string</strong> (<em>str</em>) – Slice index for for image with multiple configurations (e.g. MD, relaxation)</p></li>
 <li><p><strong>db_out</strong> (<em>str</em>) – Output ASE db file</p></li>
+<li><p><strong>ichk_calc</strong> (<em>bool</em>) – True for only dbs with calculators</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

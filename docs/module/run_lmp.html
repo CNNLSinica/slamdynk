@@ -174,86 +174,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-run_lmp">
-<span id="run-lmp"></span><h1>run_lmp<a class="headerlink" href="#module-run_lmp" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
-<dt id="run_lmp.assign_element">
-<code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">assign_element</code><span class="sig-paren">(</span><em class="sig-param">lmpdata</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.assign_element" title="Permalink to this definition">¶</a></dt>
-<dd><p>Grep element symbols from LAMMPS data file</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>lmpdata</strong> (<em>str</em>) – only available for data file including element-type information</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>element_string</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="run_lmp.rand_pick">
-<code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">rand_pick</code><span class="sig-paren">(</span><em class="sig-param">paths</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.rand_pick" title="Permalink to this definition">¶</a></dt>
-<dd><p>Random select a structure from specified directory</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>paths</strong> (<em>str</em>) – </p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>dir_choice</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="run_lmp.run_annlmp">
-<code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">run_annlmp</code><span class="sig-paren">(</span><em class="sig-param">infile='lmp_ann.py'</em>, <em class="sig-param">mode='cluster'</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">ampfile='amp.amp'</em>, <em class="sig-param">lmpdata='data.lmp'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.run_annlmp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run LAMMPS with pair_ann potential</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>infile</strong> (<em>str</em>) – filename of in-file</p></li>
-<li><p><strong>mode</strong> (<em>str</em>) – ‘cluster’: a cluster will be cut from <em>lmpdata</em></p></li>
-<li><p><strong>condition</strong> (<em>dict</em>) – condition for MC simulation, e.g. {‘TEMP’:300, ‘RUN’:0, ‘STEPS’:100}</p></li>
-<li><p><strong>ampfile</strong> (<em>str</em>) – </p></li>
-<li><p><strong>lmpdata</strong> (<em>str</em>) – </p></li>
-<li><p><strong>ncores</strong> (<em>int</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="run_lmp.xsf2lmp">
-<code class="sig-prename descclassname">run_lmp.</code><code class="sig-name descname">xsf2lmp</code><span class="sig-paren">(</span><em class="sig-param">xsfile</em>, <em class="sig-param">lmpdata_out='data.lmp'</em><span class="sig-paren">)</span><a class="headerlink" href="#run_lmp.xsf2lmp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transform xsf to LAMMPS data file by <a class="reference external" href="atomsk:https://atomsk.univ-lille.fr/">atomsk</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>xsfile</strong> (<em>str</em>) – </p></li>
-<li><p><strong>lmpdata_out</strong> (<em>str</em>) – </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>lmpdata</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
+  <div class="section" id="run-lmp">
+<h1>run_lmp<a class="headerlink" href="#run-lmp" title="Permalink to this headline">¶</a></h1>
 </div>
 
 

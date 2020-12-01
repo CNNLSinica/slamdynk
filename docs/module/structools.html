@@ -197,7 +197,7 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span><span class="p">,</span> <span class="n">add_vac</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span><span class="p">,</span> <span class="n">add_vac</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span><span class="o">=</span><span class="n">assign_alloy</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="s1">&#39;Al&#39;</span><span class="p">])</span>
@@ -229,7 +229,7 @@
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Cu</span><span class="p">)</span>
@@ -302,7 +302,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A1</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">(</span><span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Fe&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Cr&#39;</span><span class="p">],</span> <span class="n">replicate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
 <span class="go">Atoms(symbols=&#39;Fe4Co4Ni4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74])</span>
@@ -378,7 +378,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dl>
 <p class="rubric">Example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">min_dist_ary</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">min_dist_ary</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">min_dist_ary</span><span class="p">(</span><span class="n">Cu</span><span class="p">,</span> <span class="n">Cu</span><span class="p">)</span>
@@ -408,7 +408,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span><span class="p">,</span> <span class="n">swap_atoms</span><span class="p">,</span> <span class="n">multi_call</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span><span class="p">,</span> <span class="n">swap_atoms</span><span class="p">,</span> <span class="n">multi_call</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A0</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">([</span><span class="s1">&#39;Fe&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Cr&#39;</span><span class="p">],</span> <span class="n">replicate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span>
 <span class="go">Atoms(symbols=&#39;Fe4Co4Ni4Cr4&#39;, pbc=True, cell=[5.74, 5.74, 5.74])</span>
@@ -442,7 +442,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dl>
 <p class="rubric">Example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">overlap_cluster</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">overlap_cluster</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Ag_matrix</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu_overlap</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">overlap_list</span> <span class="o">=</span> <span class="n">overlap_cluster</span><span class="p">(</span><span class="n">Ag_matrix</span><span class="p">,</span> <span class="n">Cu_overlap</span><span class="p">,</span> <span class="n">rc_indexes</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">radius</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -480,7 +480,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dl>
 <p class="rubric">Example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">overlap_sites</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">overlap_sites</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">overlap_sites</span><span class="p">(</span><span class="n">Ag</span><span class="p">,</span> <span class="n">Cu</span><span class="p">)</span>
@@ -511,7 +511,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dl>
 <p class="rubric">Example</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">replace_atoms</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">replace_atoms</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Ag&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Ag</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -542,7 +542,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span><span class="p">,</span> <span class="n">strained_bulk</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">create_bulk</span><span class="p">,</span> <span class="n">strained_bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">create_bulk</span><span class="p">([</span><span class="s1">&#39;Cu&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">Cu</span><span class="p">)</span>
 <span class="go">Atoms(symbols=&#39;Cu4&#39;, pbc=True, cell=[3.61, 3.61, 3.61])</span>
@@ -577,6 +577,35 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="structools.subs_atoms">
+<code class="sig-prename descclassname">structools.</code><code class="sig-name descname">subs_atoms</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">sites_ratio=None</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.subs_atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Substitue atoms by specified composition (improved version of <cite>sub_atoms</cite>)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>ASE Atoms object</em>) – </p></li>
+<li><p><strong>sites_ratio</strong> (<em>dict</em>) – e.g. {‘Cu’: 0.75, ‘Ag’: 0.25}</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ASE Atoms object</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">subs_atoms</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span><span class="o">=</span><span class="n">subs_atoms</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">sites_ratio</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Cu&#39;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;Ag&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span>
+<span class="go">Atoms(symbols=&#39;Cu13AgCu2Ag5Cu2AgCu2AgCu5&#39;, pbc=True, cell=[7.22, 7.22, 7.22])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="structools.swap_atoms">
 <code class="sig-prename descclassname">structools.</code><code class="sig-name descname">swap_atoms</code><span class="sig-paren">(</span><em class="sig-param">atoms=None</em>, <em class="sig-param">swap_pairs=None</em>, <em class="sig-param">rand=True</em><span class="sig-paren">)</span><a class="headerlink" href="#structools.swap_atoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Swap specified atom-pairs of Atoms object</p>
@@ -596,7 +625,7 @@ e.g. {‘C’:[(‘D’,1)]}</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pkgall.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span><span class="p">,</span> <span class="n">swap_atoms</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">slamdynk.structools</span> <span class="kn">import</span> <span class="n">assign_alloy</span><span class="p">,</span> <span class="n">swap_atoms</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ase.build</span> <span class="kn">import</span> <span class="n">bulk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Cu</span><span class="o">=</span><span class="n">bulk</span><span class="p">(</span><span class="s1">&#39;Cu&#39;</span><span class="p">,</span><span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Alloy</span><span class="o">=</span><span class="n">assign_alloy</span><span class="p">(</span><span class="n">atoms</span><span class="o">=</span><span class="n">Cu</span><span class="p">,</span> <span class="n">elements</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Cr&#39;</span><span class="p">,</span><span class="s1">&#39;Co&#39;</span><span class="p">,</span><span class="s1">&#39;Ni&#39;</span><span class="p">,</span><span class="s1">&#39;Fe&#39;</span><span class="p">])</span>

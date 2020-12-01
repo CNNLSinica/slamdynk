@@ -222,7 +222,7 @@
 
 <dl class="function">
 <dt id="ann_soap.init_pgm">
-<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">init_pgm</code><span class="sig-paren">(</span><em class="sig-param">loop_index=1</em>, <em class="sig-param">prep_struct='0-prepared_structs'</em>, <em class="sig-param">old_db='1-1st_ANN_potential/all_train.db'</em>, <em class="sig-param">test_db='1-1st_ANN_potential/all_test.db'</em>, <em class="sig-param">old_amp='1-1st_ANN_potential/ANN-tflow.params'</em>, <em class="sig-param">new_db='3-updated_ANN_potential/all_train.db'</em>, <em class="sig-param">new_amp='3-updated_ANN_potential/ANN-tflow.params'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.init_pgm" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">ann_soap.</code><code class="sig-name descname">init_pgm</code><span class="sig-paren">(</span><em class="sig-param">loop_index=1</em>, <em class="sig-param">prep_struct='0-prepared_structs'</em>, <em class="sig-param">old_db='1-1st_ANN_potential/all_train.db'</em>, <em class="sig-param">test_db='1-1st_ANN_potential/all_test.db'</em>, <em class="sig-param">old_amp='1-1st_ANN_potential/ANN-tflow.params'</em>, <em class="sig-param">new_db='3-updated_ANN_potential/all_train.db'</em>, <em class="sig-param">new_amp='3-updated_ANN_potential/ANN-tflow.params'</em>, <em class="sig-param">mode='cluster'</em>, <em class="sig-param">ncores=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ann_soap.init_pgm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize parameters for this program</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -234,6 +234,7 @@
 <li><p><strong>old_amp</strong> (<em>str</em>) – The previous trained ANN potential file by ANN_Modules</p></li>
 <li><p><strong>new_db</strong> (<em>str</em>) – The training set with new added configurations from self-learning</p></li>
 <li><p><strong>new_amp</strong> (<em>str</em>) – ANN potential trained with <cite>new_db</cite></p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – ‘bulk’, [‘cluster’], ‘slab’</p></li>
 <li><p><strong>ncores</strong> (<em>int</em>) – Number of cores for parallel computating</p></li>
 </ul>
 </dd>
@@ -254,7 +255,7 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>status</strong> (<em>dict</em>) – Dict from <cite>init_pgm</cite></p></li>
-<li><p><strong>condition</strong> (<em>dict</em>) – Dict contains parameters for <a class="reference internal" href="run_lmp.html#run_lmp.run_annlmp" title="run_lmp.run_annlmp"><code class="xref py py-mod docutils literal notranslate"><span class="pre">run_lmp.run_annlmp</span></code></a></p></li>
+<li><p><strong>condition</strong> (<em>dict</em>) – Dict contains parameters for <code class="xref py py-mod docutils literal notranslate"><span class="pre">run_lmp.run_annlmp</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
